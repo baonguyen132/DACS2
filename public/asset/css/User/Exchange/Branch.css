@@ -1,0 +1,70 @@
+.row.listVoucher {
+    justify-content: center;
+}
+
+.voucher {
+    width: min(415px, 100%);
+    height: 170px;
+    padding: 14px;
+}
+.content-voucher {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: white;
+    position: relative;
+}
+
+.code-voucher {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid; */
+    float: left;
+    position: relative;
+}
+
+.contentV {
+    width: 100%;
+    height: 100%;
+    /* border-right: 1px dashed #8888; */
+    padding: 5px;
+    display: flex;
+    /* overflow: hidden; */
+}
+
+.content-image {
+    width: 122px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-introduce {
+    width: calc(100% - 122px);
+    padding: 15px 0px;
+}
+.content-introduce ul {
+    margin: 0px;
+}
+
+.content-introduce h3 {
+    color: #10a95a;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+.content-introduce li {
+    font-size: 17px;
+}
+.content-introduce button {
+    width: 160px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.content-introduce button a {
+    text-decoration: none;
+    color: green;
+}

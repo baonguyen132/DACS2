@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300&display=swap");
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif !important;
+    line-height: unset !important;
+}
+
+/* html {
+  font-family: Arial, Helvetica, sans-serif;
+
+} */
+
+/* Main */
+#main {
+    height: max-content;
+}
+
+/* Slider */
+#slider {
+    /* margin-top: 60px; */
+    height: 100%;
+    position: relative;
+    /* top: -10%; */
+    /* background-color: #1b4d3e; */
+    /* background-color: #006a4e; */
+    /* background: linear-gradient(320deg, #1b4d3e, #18453b); */
+    /* background: linear-gradient(320deg, #1b4d3e, #004953); */
+    /* background-color: #18453b; */
+    /* background-color: #004953; */
+    /* background-image: url(/assets/img/pngtree-simple-green-leaves-wallpaper-picture-image_1330107.jpg);
+  background-size: 100% 100%;
+  background-position: center; */
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* overflow: hidden; */
+}
+
+video {
+    width: 100%;
+}
+
+#slider #video {
+    position: absolute;
+    right: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#slider .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#slider .slider__info {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.slider-phara {
+    font-size: 4rem;
+    font-weight: 580;
+    /* color: #1ccb71; */
+    color: #004953;
+    letter-spacing: 5px;
+    margin: 0 !important;
+    line-height: unset !important;
+}
+
+.slider-phara:last-child {
+}
+
+.slider-message {
+    display: block;
+    color: #006a4e;
+    letter-spacing: 6px;
+    font-size: 30px;
+    margin-top: 16px;
+}
+
+.slider__btn {
+    align-self: center;
+    display: block;
+    width: 180px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50px;
+    padding: 14px 0;
+    margin-top: 27px;
+    background: linear-gradient(320deg, #1b4d3e, #18453b);
+    /* background: linear-gradient(45deg, #057d2d, #70c25e); */
+    transition: all ease 0.8s;
+}
+
+.slider__btn-info i {
+    margin-left: 6px;
+}
+
+.slider__btn:hover {
+    background: linear-gradient(45deg, #057d2d, #70c25e);
+    box-shadow: 0 0 10px #057d2d, 0 0 20px #057d2d, 0 0 45px #057d2d;
+    transition: all ease 0.8s;
+}

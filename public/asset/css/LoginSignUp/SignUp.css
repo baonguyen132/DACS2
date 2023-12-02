@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300&display=swap");
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Raleway", sans-serif !important;
+    height: 100vh;
+    position: relative;
+}
+
+.view {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background: linear-gradient(225deg, #19ff8f, #004953);
+}
+
+.view::before {
+    content: "";
+    position: absolute;
+    left: 34%;
+    width: 65px;
+    height: 65px;
+    top: 10%;
+    background: white;
+    box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 #888;
+    transform: rotate(45deg);
+    border-radius: 10px;
+    filter: blur(10px);
+}
+
+.view::after {
+    content: "";
+    position: absolute;
+    left: 34%;
+    width: 65px;
+    height: 65px;
+    top: 10%;
+    background: white;
+    transform: rotate(45deg);
+    z-index: 1;
+    border-radius: 10px;
+}
+.content {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 #888;
+    justify-content: center;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.select {
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    font-size: 15px;
+    font-weight: normal;
+    border-radius: 0.375rem;
+    text-align: center;
+    height: 50px;
+    line-height: 20px;
+    width: 100%;
+}
+
+.radio {
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.radio-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.border-input-left,
+.border-input-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.form-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* khoảng cách giữa radio và chữ */
+}
+
+input[type="date"] {
+    width: 100%; /* chiều dài bằng tổng chiều dài của 2 ô radio */
+    border: none;
+    background-color: #f1f1f1;
+    font-size: 16px;
+    border-radius: 0.375rem;
+    height: 100%;
+}
+
+.border-input {
+    border: 0px solid #ccd0d5;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 0 auto;
+    font-weight: normal;
+    height: auto;
+    position: relative;
+    border-radius: 0.375rem;
+    line-height: 36px;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    /* điều chỉnh chiều dài của input date khi màn hình nhỏ hơn 768px */
+    input[type="date"] {
+        width: calc(
+            100% - 10px
+        ); /* chiều dài bằng chiều dài của ô radio thứ nhất cộng với chiều dài của ô radio thứ 2 */
+    }
+}
+
+.row.my-3.title {
+    justify-content: center;
+    text-align: center;
+    font-weight: 500 !important;
+    width: 100%;
+    margin-left: 0;
+}
+
+.content form {
+    width: 100%;
+}
+
+.submit {
+    margin: 0px;
+    width: 100%;
+    justify-content: space-around;
+    margin: 0px !important;
+}
+.submit button {
+    padding: 7px 15px;
+    font-size: 1rem;
+    border-radius: 12px;
+    width: 100%;
+    background: none;
+    border: 3px solid #1ca586;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.submit button::before,
+.submit button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background: #1ca586;
+    z-index: -1;
+    transition: all 0.5s;
+}
+.submit button::before {
+    left: 0;
+}
+.submit button::after {
+    right: 0;
+}
+
+.submit button:hover {
+    color: white;
+}
+.submit button:hover::before {
+    width: 50%;
+}
+.submit button:hover::after {
+    width: 50%;
+}
+
+.title {
+    width: 58%;
+}
+.formsignup {
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+}
+
+span.input-group-text {
+    height: 40px;
+}
+.input-group input {
+    height: 40px;
+}
+
+.row.male label,
+.row.female label {
+    width: max-content;
+}
+.row.male input,
+.row.female input {
+    width: max-content;
+}
+.row.male,
+.row.female {
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+.titlegender.col-sm-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titledob.col-sm-5 {
+    display: flex;
+    align-items: center;
+    width: max-content;
+}
+
+.dob-gender h6 {
+    margin: 0px;
+    width: 100%;
+}
+
+@media only screen and (min-width: 1800px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .view {
+        width: 1800px;
+
+        height: 900px !important;
+        border-radius: 10px;
+
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .view {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content {
+        width: min(100%, 460px);
+        height: 85%;
+        border-radius: 8px;
+        background: #ffffff33;
+        z-index: 1;
+        box-shadow: none;
+    }
+
+    .content form {
+        height: 100%;
+    }
+
+    .view::before {
+        display: none;
+    }
+    .view::after {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .content {
+        height: 100%;
+    }
+}
+@media only screen and (max-width: 1265px) {
+    .dob-gender {
+        flex-direction: column;
+    }
+    .dob-gender .col-sm-7.date,
+    .dob-gender .col-sm-5.gder {
+        width: 100%;
+    }
+    .dob-gender .dob {
+        width: calc(100% - 115px);
+    }
+
+    .dob-gender .titlegender {
+        justify-content: start;
+        width: 115px;
+    }
+    .dob-gender .col-sm-6.gender {
+        width: calc(100% - 115px);
+    }
+    .col-sm-7.date {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .content form .formsignup .col-sm-8 {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .content {
+        height: 100% !important;
+    }
+}
+@media only screen and (max-width: 460px) {
+    input[type="date"] {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 360px) {
+    input[type="date"] {
+        font-size: 50%;
+    }
+}

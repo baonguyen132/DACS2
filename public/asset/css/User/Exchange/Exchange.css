@@ -1,0 +1,245 @@
+.handle {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ffffff57;
+}
+.page {
+    /* margin: 15px 0; */
+    display: flex;
+}
+.page button {
+    width: 40px;
+    font-size: 20px;
+}
+.page input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
+.page input {
+    width: 40px;
+    display: flex;
+    height: 40px;
+    background: #158d63;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+/* Tablet && PC low resolution */
+@media screen and (max-width: 1024px) {
+    /* History */
+
+    .page {
+        justify-content: center;
+    }
+
+    .myhistory__item-info {
+        padding: 20px 0;
+    }
+
+    .myhistory__item-progress-bar {
+        width: 100%;
+    }
+
+    /* Exchange */
+    .exchange__content-tittle {
+        width: 65%;
+    }
+
+    .exchange__content-info {
+        width: 35%;
+        margin-left: 20px;
+        text-align: justify;
+    }
+
+    .exchange__content-info p {
+        padding: 0;
+    }
+
+    .exchange__container-tittle {
+        width: 16%;
+    }
+
+    .exchange__container-list {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer__content {
+        flex-direction: column;
+    }
+
+    .footer__content-fhead,
+    .footer__content-fbody,
+    .footer__content-flast {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer__content-fbody,
+    .footer__content-flast {
+        margin-bottom: 40px;
+    }
+
+    .footer__content-fhead {
+        text-align: center;
+    }
+
+    .footer__content-fbody {
+        justify-content: space-evenly;
+    }
+
+    .footer__content-flast {
+        text-align: center;
+    }
+
+    .footer__foot-license {
+        width: 35%;
+    }
+
+    .footer__foot-policy {
+        width: 65%;
+        justify-content: flex-end;
+        text-align: end;
+    }
+
+    .footer__foot-policy a {
+        padding-right: 10px;
+        letter-spacing: 1px;
+    }
+}
+/* ------------------------ Tablet ---------------------------- */
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+    /* History */
+    hr {
+        width: 60%;
+    }
+    #history .history__thanks {
+        width: 80%;
+    }
+    /* Exchange */
+    .exchange__container-tittle {
+        width: 26%;
+    }
+
+    .exchange__container-list {
+        width: 100%;
+        margin-bottom: 26px;
+    }
+
+    .exchange__container-list-row {
+        flex-wrap: wrap;
+        margin-bottom: 0;
+        justify-content: center;
+    }
+
+    .exchange__container-item {
+        width: 80%;
+        margin-bottom: 16px;
+    }
+}
+
+/* ------------------------------- Mobile ----------------------------- */
+@media only screen and (max-width: 739px) {
+    hr {
+        width: 80%;
+    }
+    /* History */
+    #history h1 {
+        font-size: 2.8rem;
+    }
+    #history .history__thanks {
+        width: 100%;
+    }
+    /* Exchange */
+    .exchange__content {
+        flex-direction: column;
+        padding: 0 12px;
+    }
+
+    .exchange__content-tittle {
+        width: 100%;
+        text-align: center;
+    }
+
+    .exchange__content-tittle p {
+        font-size: 3rem;
+    }
+
+    .exchange__content-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 12px 0 0;
+    }
+
+    .exchange__container-tittle {
+        width: 50%;
+    }
+
+    .exchange__container-list {
+        width: 100%;
+        margin-bottom: 26px;
+    }
+
+    .exchange__container-list-row {
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+
+    .exchange__container-item {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    /* Footer */
+    .footer__content-fbody {
+        justify-content: space-around;
+    }
+
+    .footer__content-col {
+        flex: 1;
+    }
+
+    .footer__content-connect {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .footer__content-connect input {
+        padding: 14px 20px;
+    }
+
+    .footer__content-connect button {
+        padding: 14px 20px;
+        margin-left: 0;
+    }
+
+    .footer__foot {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__foot-license {
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer__foot-policy {
+        text-align: center;
+        width: 100%;
+        padding-top: 12px;
+        justify-content: center;
+    }
+}

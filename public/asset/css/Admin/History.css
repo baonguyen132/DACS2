@@ -1,0 +1,362 @@
+.scan-content {
+}
+
+.listhistory-content {
+}
+.scanqr,
+.listhistory {
+}
+.listhistory tr {
+    border-bottom: 1px solid black;
+}
+.scanqr h3 {
+    font-weight: bold;
+    color: #10a95a;
+    margin: 0;
+    height: 40.4px;
+    display: flex;
+    align-items: center;
+}
+
+/* scan */
+#reader {
+    width: 100%;
+    height: 400px;
+    border: 2px solid #10a95a !important;
+}
+#result {
+    text-align: center;
+    font-size: 1.5rem;
+}
+.scan button {
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 5px;
+    background: transparent;
+    color: #10a95a;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.scan {
+    /* margin: 15px 0; */
+}
+
+.scan a {
+    margin-top: 15px;
+    color: #10a95a;
+    font-weight: bolder;
+    text-decoration: none !important;
+    display: block;
+}
+.content-scan .buttonsubmietHistory {
+    width: 130px;
+    height: 40px;
+    background: #10a95a;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+}
+body.dark .row.rowcontent table {
+    color: white;
+}
+body.dark .row.rowcontent .listhistory tr {
+    border-bottom: 1px solid white;
+}
+body.dark .row.rowcontent tbody tr:hover {
+    color: black;
+    background: white !important;
+    font-weight: bolder;
+}
+.buttonclose.btn {
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: #10a95a;
+    color: white;
+}
+.modal-header h2 {
+    margin: 0;
+    font-weight: bolder;
+    color: #10a95a;
+    letter-spacing: 2px;
+}
+.listhistory i.bx.bxs-book-content {
+    font-size: 25px;
+    display: block;
+    text-align: center;
+    color: #10a95a;
+    cursor: pointer;
+}
+
+.listhistory i.bx.bxs-message-alt-x {
+    font-size: 25px;
+    display: block;
+    text-align: center;
+    color: red;
+    cursor: pointer;
+}
+
+.listhistory.table-responsive form button {
+    border: none;
+    background: transparent;
+    width: 100%;
+}
+.listhistory i.bx.bxs-location-plus {
+    font-size: 25px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.listhistory a {
+    text-decoration: none;
+    color: #10a95a;
+}
+
+/* --- PRODUCT LIST --- */
+.products {
+    border-top: 1px solid #ddd;
+}
+
+.products > li {
+    padding: 1rem 0;
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.confirm {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 50px 0; */
+}
+.rows {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col.left {
+    flex-basis: 70%;
+}
+
+.col.right {
+    flex-basis: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.detail {
+    padding: 0 0.5rem;
+    line-height: 2.2rem;
+}
+
+.detail .name {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.detail .description {
+    font-size: 1rem;
+    margin: 0.7rem 0;
+    line-height: 1.4;
+}
+
+.detail .price {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.quantity,
+.remove {
+    width: 50%;
+    text-align: center;
+}
+
+.quantity > input {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    left: calc(50% - 30px);
+    background: #fff;
+    border: 2px solid #ddd;
+    text-align: center;
+    font: 600 1.5rem Helvetica, Arial, sans-serif;
+}
+
+.quantity > input:hover,
+.quantity > input:focus {
+    border-color: #f58551;
+}
+
+.close {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.close:hover {
+    color: #f58551;
+}
+
+/* --- SUMMARY --- */
+.promotion,
+.summary,
+.checkout {
+    float: left;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.promotion > label {
+    float: left;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.promotion > input {
+    float: left;
+    width: 80%;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border: 2px solid #16cc9b;
+}
+
+.promotion:hover > input {
+    border-color: #f58551;
+}
+
+.promotion > button {
+    float: left;
+    width: 20%;
+    padding: 1rem 0.5rem;
+}
+
+.promotion:hover > button {
+    border-color: #f58551;
+    background-color: #f58551;
+}
+
+.promotion > button::after {
+    content: "\276f";
+    font-size: 1rem;
+}
+
+.summary {
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+.summary ul li {
+    padding: 0.5rem 0;
+}
+
+.summary ul li span {
+    display: inline-block;
+    width: 30%;
+}
+
+.summary ul li.total {
+    font-weight: bold;
+}
+
+.hide {
+    display: none !important;
+}
+
+/* --- SMALL SCREEN --- */
+@media all and (max-width: 599px) {
+    .thumbnail img {
+        display: none;
+    }
+
+    .quantity > input {
+        width: 40px;
+        height: 40px;
+        left: calc(50% - 20px);
+    }
+
+    .remove svg {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* --- MEDIUM & LARGE SCREEN --- */
+@media all and (min-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 75%;
+        max-width: 960px;
+    }
+
+    .thumbnail,
+    .detail {
+        float: left;
+    }
+
+    .thumbnail {
+        width: 30%;
+    }
+
+    .detail {
+        width: 65%;
+        padding: 0 1rem;
+    }
+
+    .promotion,
+    .summary {
+        width: 50%;
+    }
+
+    .checkout {
+        width: 100%;
+    }
+
+    .checkout,
+    .summary {
+        text-align: right;
+    }
+}
+
+/* --- LARGE SCREEN --- */
+@media all and (min-width: 992px) {
+    html {
+        font-size: 16px;
+    }
+}
+.thumbnail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    padding: 0 25px;
+}
+.information_user h3 {
+    margin: 0px;
+}
+.comfirm h3 {
+    margin-bottom: 5px;
+}
+.information_user p,
+.comfirm p {
+    margin: 3px 0;
+}
+.buttonConfirm {
+    min-width: 110px;
+    min-height: 20px;
+    font-size: 15px;
+    letter-spacing: 1.3px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, rgb(58 96 90) 0%, rgb(114 176 170) 100%);
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out 0s;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    margin-top: 10px;
+}

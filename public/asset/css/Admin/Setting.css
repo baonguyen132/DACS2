@@ -1,0 +1,570 @@
+.datebirth {
+    /* font-size: 1rem; */
+    padding: 12px 8px;
+    border-color: #8888;
+    border-radius: 6px;
+    height: 58px;
+    border: 1px solid #ced4da;
+}
+
+#labeldate {
+    margin: 0 10px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 60px;
+}
+#login {
+    margin: 0 10px;
+    font-size: 18px;
+
+    line-height: 60px;
+}
+.row {
+    margin-bottom: 10px;
+}
+
+/* avata page */
+
+.avata_account {
+    display: flex;
+    flex-direction: row;
+}
+.avata_account img {
+    float: left;
+}
+.avata_account > div {
+    margin: 0px 10px;
+}
+.avata_account input {
+    margin: 5px 0px;
+}
+.img {
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 250px;
+    border-radius: 50%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border: 5px solid var(--slidebar-color);
+    top: 325px;
+    position: relative;
+    transition: var(--tran-04);
+}
+.riw {
+    display: flex;
+    justify-content: center;
+}
+#full_name {
+    font-family: Sofia, sans-serif;
+}
+#cccd {
+    font-family: Sofia, sans-serif;
+}
+#title {
+    display: flex;
+    justify-content: flex-end;
+}
+.modal {
+    font-family: Sofia, sans-serif;
+}
+#avata_page_image {
+    background: var(--slidebar-color);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    transition: var(--tran-04);
+}
+#page_link {
+    background-size: cover;
+    background-position: 50% 63%;
+    height: 442px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 0;
+}
+#information_account {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 65px;
+    padding: 15px 0px;
+}
+.form_title_account {
+    display: flex;
+    padding: 20px 10px;
+    flex-direction: column;
+}
+.title_account h2 {
+    font-family: Sofia, sans-serif;
+    margin: 15px 0;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: #10a95a;
+}
+.information_account {
+    font-family: Sofia, sans-serif;
+}
+ul.nav.flex-column.nav-list li {
+    padding: 5px 0px;
+    margin: 5px 0;
+    color: var(--text-color);
+    transition: var(--tran-02);
+}
+.row.form_update_account {
+    padding: 10px;
+    justify-content: space-around;
+}
+.col-sm-12.form_title_account {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    background: var(--slidebar-color);
+    transition: var(--tran-04);
+}
+.information_account_4 {
+    padding: 20px;
+    border-radius: 20px;
+    /* box-shadow: 5px 5px 20px 1px #888 inset, 10px 10px 10px 3px; */
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.col-sm-5.username_password input[type="text"] {
+    margin: 15px 0;
+}
+.username_password_4 {
+    padding: 20px;
+    font-family: Sofia, sans-serif;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+input#newpassword {
+    margin: 15px 0;
+}
+div#my_information {
+    border-radius: 10px;
+    margin-bottom: 0;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    margin-top: 55px;
+    background: var(--slidebar-color);
+    padding: 20px 0;
+    transition: var(--tran-04);
+}
+
+div#title_information {
+    text-align: center;
+    font-family: "Sofia", sans-serif;
+    margin: 15px 0px;
+}
+.row.my_information {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px 0px 0px;
+    font-family: Sofia, sans-serif;
+    margin-bottom: 0px;
+}
+.fullname_information h4 {
+    /* text-align: center; */
+    line-height: 46px;
+    font-weight: bolder;
+    /* letter-spacing: 2px; */
+    color: #10a95a;
+    margin: 0;
+}
+.fullname_information input[type="text"] {
+    border: 0.5px solid;
+    border-radius: 10px;
+    font-size: 17px;
+    height: 46px;
+}
+.cccd_information input[type="text"] {
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    height: 46px;
+    float: left;
+    text-align: center;
+}
+.cccd_information h4 {
+    /* text-align: center; */
+}
+.col-sm-2.card_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+.row.image {
+    /* width: 150px; */
+
+    margin: 0px;
+
+    /* display: flex; */
+
+    justify-content: center;
+
+    /* align-content: center; */
+
+    /* align-items: center; */
+
+    /* margin: 0px; */
+}
+.col-sm-2.card_image input[type="file"] {
+    width: 82px;
+    padding: 0px;
+    border: none;
+}
+.col-sm-2.card_image h4 {
+    margin-bottom: 0px;
+    height: 37px;
+    padding: 0;
+    text-align: center;
+}
+.row.date_of_birth h4 {
+    /* text-align: center; */
+    line-height: 46px;
+    font-weight: bolder;
+    /* letter-spacing: 2px; */
+    color: #10a95a;
+    margin: 0;
+}
+.row.date_of_birth input[type="date"] {
+    border: 0.5px solid;
+    border-radius: 10px;
+    font-size: 18px;
+    height: 46px;
+}
+.cccd_information h4 {
+    /* padding: 0 15px; */
+    /* text-align: center; */
+    /* letter-spacing: 2px; */
+    color: #10a95a;
+    margin: 0;
+    font-weight: bolder;
+}
+.row.information {
+    display: flex;
+    justify-content: flex-start;
+    font-family: Sofia, sans-serif;
+    padding: 0px 40px;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 60px;
+}
+.gender_information h4 {
+    /* text-align: center; */
+    font-weight: bolder;
+    /* letter-spacing: 2px; */
+    color: #10a95a;
+    margin: 0;
+}
+.row.gender {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.row.gender label {
+    margin: 0px 15px;
+    line-height: 30px;
+    color: var(--text-color);
+    transition: var(--tran-02);
+}
+.row.card_citizen {
+    display: flex;
+    justify-content: space-around;
+    font-family: Sofia, sans-serif;
+    align-items: center;
+    margin: 0.5rem 0.7rem;
+}
+.row.card_citizen input[type="file"] {
+    width: 100%;
+    padding: 0px 12%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.row.placeofbrith {
+    /* padding: 0 40px; */
+    display: flex;
+    justify-content: flex-start;
+    font-family: Sofia, sans-serif;
+    align-items: center;
+    padding: 0 60px;
+}
+.row.placeofbrith h4 {
+    /* text-align: center; */
+    line-height: 46px;
+    margin: 0;
+    font-weight: bolder;
+    /* letter-spacing: 2px; */
+    color: #10a95a;
+}
+.place_brith_information input[type="text"] {
+    border: 0.5px solid;
+    border-radius: 10px;
+    font-size: 17px;
+    height: 46px;
+}
+.row.accommodation {
+    padding: 0 48px;
+    display: flex;
+    justify-content: flex-start;
+    font-family: Sofia, sans-serif;
+    align-items: center;
+    margin: 10px 0;
+}
+.row.accommodation h4 {
+    /* text-align: center; */
+    line-height: 46px;
+    margin: 0;
+    font-weight: bolder;
+    /* letter-spacing: 2px; */
+    color: #10a95a;
+}
+.row.accommodation input[type="text"] {
+    border: 0.5px solid;
+    border-radius: 10px;
+    font-size: 17px;
+    height: 46px;
+}
+.upload_my_information form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.content .rowcontent {
+    /* padding: 0 20px; */
+    justify-content: center;
+}
+.row.rowcontent .setting {
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    width: min(990px, 100%);
+}
+
+/* 25/05/2023 */
+div#avatamodal .modal-header h3 {
+    margin: 0;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: #10a95a;
+}
+
+div#avatamodal .modal-body form input[type="submit"] {
+    /* margin: 5px 0 0; */
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: bold;
+    background: #10a95a;
+    color: white;
+    border: none;
+}
+
+div#avatamodal .modal-footer button {
+    /* margin: 5px 0 0; */
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: bold;
+    background: #10a95a;
+    color: white;
+    border: none;
+}
+
+div#avatamodal .modal-body label {
+    font-weight: bolder;
+    color: #10a95a;
+}
+
+div#title .col-xl-6.col-lg-10 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#title .col-xl-6.col-lg-10 h3 {
+    margin: 0px;
+    font-weight: bolder;
+    /* letter-spacing: 2px; */
+    color: #10a95a;
+}
+
+div#avata_page_image div#title {
+    margin: 0px;
+    padding: 15px 0;
+}
+
+div#page_link .row {
+}
+
+div#avata_page_image {
+}
+
+div#avata_page_image div#title .row {
+    margin: 0px;
+}
+
+div#page_link {
+}
+
+div#my_information h2 {
+    margin: 15px 0;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: #10a95a;
+}
+
+.username_password_4 input[type="submit"] {
+    /* margin: 5px 0 0; */
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: bold;
+    background: #10a95a;
+    border: none;
+    color: white;
+    height: 45px;
+}
+
+.username_password_4 {
+}
+
+.username_password_4 h3 {
+    /* font-family: Sofia,sans-serif; */
+    margin: 0px;
+    font-weight: bolder;
+    /* letter-spacing: 2px; */
+    color: #10a95a;
+}
+
+.information_account_4 h3 {
+    font-family: Sofia, sans-serif;
+    margin: 0px;
+    font-weight: bolder;
+    /* letter-spacing: 2px; */
+    color: #10a95a;
+}
+.information_account_4 ul li span {
+    font-weight: bolder;
+    color: #10a95a;
+}
+input#oldpassword {
+    margin: 15px 0;
+}
+.upload_my_information input[type="submit"] {
+    margin: 5px 0;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: bold;
+    background: #10a95a;
+    border: none;
+    color: white;
+    height: 45px;
+}
+
+.col-xl-2.col-lg-4.card_image img {
+    width: 135px;
+    height: 200px;
+}
+
+.dateofbirth_information .col-sm-8 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fullname_information .col-sm-8 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row.my_information .row {
+    margin-bottom: 20px;
+}
+.row.card_citizen h4 {
+    /* margin-bottom: 20px; */
+    text-align: center;
+    line-height: 46px;
+}
+.row.card_citizen img {
+    /* margin-bottom: 20px; */
+}
+
+body.dark .row.gender label {
+    /* color: white; */
+}
+
+body.dark ul.nav.flex-column.nav-list li {
+    /* color: white; */
+}
+.row.image h4 {
+    color: #10a95a;
+    margin: 0;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.row.image input[type="file"] {
+    width: 100px;
+}
+@media only screen and (max-width: 1200px) {
+    .row.information {
+        padding: 0px;
+    }
+    .cccd_information h4 {
+        padding: 0;
+        text-align: center;
+    }
+    .row.my_information h4 {
+        text-align: center;
+    }
+    .row.placeofbrith {
+        padding: 0px;
+    }
+
+    .row.placeofbrith .col-xl-3.col-lg-4.col-md-5 h4 {
+        text-align: center;
+    }
+    .row.accommodation {
+        padding: 0px;
+    }
+
+    .row.accommodation .col-xl-3.col-lg-4 h4 {
+        text-align: center;
+    }
+    .accommodation_present {
+        padding: 0px;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .row.gender .col-xl-4.col-md-6 {
+        text-align: center !important;
+    }
+    .row.gender .col-xl-4.col-md-4 h4 {
+        /* margin-bottom: 15px; */
+        line-height: 46px;
+    }
+    .row.information .col-xl-3.col-lg-3.col-md-4 h4 {
+        /* margin-bottom: 20px; */
+        line-height: 46px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    h3#full_name {
+    }
+    .col-xl-6.col-lg-10 {
+    }
+
+    div#title .col-xl-6.col-lg-10 h3 {
+        color: white;
+        text-shadow: 3px 3px 5px #10a95a;
+        transition: var(--tran-02);
+    }
+    body.dark div#title .col-xl-6.col-lg-10 h3 {
+        color: black;
+        text-shadow: 3px 3px 5px #ffffff;
+    }
+}

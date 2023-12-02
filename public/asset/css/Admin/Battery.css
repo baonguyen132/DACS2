@@ -1,0 +1,241 @@
+input[type="text"].form-control,
+input[type="number"].form-control {
+    padding: 0.7rem 0.675rem !important;
+}
+input.form-control {
+    padding: 1.15rem 0.8rem !important;
+    margin-bottom: 20px;
+}
+input[type="submit"] {
+    width: 115px;
+    height: 45px;
+    border: none;
+    border-radius: 7px;
+    background: #10a95a;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+form h4 {
+    font-weight: bold;
+    color: #10a95a;
+}
+
+.col-sm-3 {
+    position: relative;
+    width: 315px;
+    overflow: hidden;
+    margin: 15px 0px;
+}
+
+.produce {
+    height: 400px;
+    border-radius: 10px;
+    background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+.title-battery {
+    position: absolute;
+    width: min(200px, 60%);
+    background: #eee;
+    height: 75%;
+    right: 12px;
+    transform: skewY(30deg);
+    border-radius: 0px 0px 0px 20px;
+    /* padding: 5px; */
+    overflow: hidden;
+    box-shadow: 0 2px 0 #00800099, -2px 0 0 #00800096;
+    top: -55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(-2px 2px 0px #10a95a);
+}
+.listbattery {
+    justify-content: space-between;
+}
+
+.groupbutton {
+    width: 85px;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.productcontent {
+    width: 100%;
+    height: 45%;
+    padding: 5px 15px;
+}
+.groupbutton .id,
+.groupbutton .edit,
+.groupbutton .delete {
+    width: 55px;
+    height: 55px;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #10a95a;
+    overflow: hidden;
+}
+.title-battery::before {
+    content: "";
+    background: #10a95a;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    border-bottom-left-radius: 50%;
+    filter: blur(50px);
+}
+
+.title-battery::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 60px;
+    background: #10a95a;
+    border-top-right-radius: 50%;
+    filter: blur(50px);
+}
+
+.id h3 {
+    margin: 0;
+    font-size: 20px;
+}
+.edit button {
+    width: max-content;
+    height: 100%;
+    font-size: 30px;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.delete button {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    color: white;
+}
+
+.delete form {
+    height: 100%;
+    margin: 0px !important;
+}
+
+.delete i {
+    font-size: 35px;
+}
+h4.namebattery {
+    width: 135px;
+    margin-bottom: 10px;
+    color: #10a95a;
+    text-transform: uppercase;
+}
+.productcontent ul {
+    width: max-content;
+    font-size: 17px;
+}
+
+.productcontent ul li {
+    margin-bottom: 10px;
+}
+
+button.btnclose {
+    width: 50px;
+    height: 50px;
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: transparent;
+    color: #10a95a;
+}
+.modal-footer button {
+    background: #10a95a;
+    height: 50px;
+    font-size: 20px;
+    width: 110px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 5px;
+}
+.modal-dialog label {
+    color: black;
+}
+input#nameedit,
+input#sizedit,
+input#shapeedit,
+input#pointedit {
+    padding: 26px 12px 10px !important;
+}
+.modal-dialog h3 {
+    font-weight: bold;
+    color: #10a95a;
+    margin: 0;
+}
+
+.col-sm-3:first-child {
+    /* margin-left: 0px; */
+}
+.col-sm-3:last-child {
+    margin-right: 0px;
+}
+button[name="submitbatteryedit"] {
+    background: #0f9c53;
+    font-size: 17px;
+    width: 120px;
+    height: 45px;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 1025px) {
+    .listbattery {
+        justify-content: space-around;
+    }
+
+    .searchbattery {
+        justify-content: center;
+    }
+}
+.searchbattery {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.searchbattery label {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #10a95a;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.searchbattery input[type="search"] {
+    /* width: 200px; */
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+}

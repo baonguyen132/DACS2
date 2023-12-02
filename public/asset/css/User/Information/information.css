@@ -1,0 +1,16 @@
+.update {
+    min-width: 110px;
+    min-height: 20px;
+    font-size: 15px;
+    letter-spacing: 1.3px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, rgb(58 96 90) 0%, rgb(114 176 170) 100%);
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out 0s;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    margin-top: 10px;
+}

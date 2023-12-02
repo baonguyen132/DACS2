@@ -1,0 +1,333 @@
+#main-battery {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0;
+}
+
+.batterys {
+    position: relative;
+    /* background: #f1f1f1; */
+}
+
+/*============slogan================*/
+.slogan_battery {
+    font-size: 3.2rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.development .slogan_battery {
+    color: #fff;
+}
+
+.batterys .slogan_battery:after {
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 48%;
+    top: calc(100% + 12px);
+    background-color: #1b4d3e;
+    background-image: linear-gradient(45deg, #009432, #96ee82);
+    border-radius: 999px;
+    bottom: 0;
+}
+
+h2 strong {
+    font-family: "Poppins", sans-serif;
+    background-color: #1b4d3e;
+    background-image: linear-gradient(0deg, #004953 0%, #96ee82 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.center_page {
+    /* border: solid 35px #f1f1f1; */
+    /* max-width: 1123px; */
+    display: flex;
+    /* border-radius: 10px; */
+    /* margin: 0 auto; */
+    flex-direction: column;
+    padding: 35px;
+    padding-bottom: 0px;
+}
+
+/*-----------------CSS battery------------------*/
+.parent-battery {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.battery {
+    margin-bottom: 30px;
+    background-color: #fff;
+    position: relative;
+    width: 415px !important;
+    height: 224px;
+    border-radius: 10px;
+    display: flex;
+    padding: 0px !important;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.img_battery {
+    background-color: #004953;
+    width: 230px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.img_battery:hover img {
+    transform: scale(1.2);
+}
+
+.child-img-battery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    width: 85px;
+    height: 85px;
+    background-color: #004953;
+    border-radius: 50%;
+    left: 89px;
+    top: 6px;
+    border: 4px solid #fdfffe;
+}
+
+.child-img-battery > span {
+    font-family: "Poppins", sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.infor_battery {
+    font-size: 18px;
+    width: 415px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    margin-left: 43px;
+}
+
+/* form */
+
+.name-battery + p {
+    max-width: 220px;
+}
+
+.infor_battery .name-battery {
+    display: inline-block;
+    font-size: 25px;
+    color: #004953;
+    font-weight: bolder;
+}
+
+.img_battery img {
+    display: block;
+    padding-top: 45px;
+    transition: all linear 0.3s;
+    /* width: 50px; */
+}
+
+.count_battery {
+    font-size: 27px;
+    font-weight: 700;
+    font-style: italic;
+    color: #1b4d3e;
+}
+
+/* -------------------------CSS - btn ----------------------- */
+
+.wrap {
+    /* position: absolute; */
+    /* bottom: 49px; */
+    /* left: 655px; */
+    /* z-index: 1; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    min-width: 90px;
+    min-height: 20px;
+    font-size: 15px;
+    letter-spacing: 1.3px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, rgb(58 96 90) 0%, rgb(114 176 170) 100%);
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out 0s;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.button:hover,
+.button:focus {
+    color: #e2e2f0;
+    /* transform: translateY(-6px); */
+}
+
+button:hover::before,
+button:focus::before {
+    opacity: 1;
+}
+
+button:hover::after,
+button:focus::after {
+    animation: none;
+    display: none;
+}
+
+@keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        width: 150px;
+        height: 150px;
+        opacity: 0;
+    }
+}
+
+/*=================================*/
+
+.indeterminate-progress-bar {
+    /* Color */
+    background-color: #d1d5db;
+
+    /* Rounded border */
+    border-radius: 9999px;
+
+    /* Size */
+    height: 0.3rem;
+    width: min(550px, 70%);
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+.indeterminate-progress-bar__progress {
+    /* Color */
+    background-color: #64717e;
+
+    /* Rounded border */
+    border-radius: 9999px;
+
+    /* Absolute position */
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: 50%;
+
+    /* Move the bar infinitely */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: indeterminate-progress-bar;
+}
+.infor_battery_content b {
+    color: #004953;
+}
+
+.number-battery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-dialog {
+    margin: 0px auto;
+    display: flex !important;
+    align-items: center !important;
+    top: 15px;
+}
+
+.number-battery input {
+    border: 2px solid #004953;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+@keyframes indeterminate-progress-bar {
+    from {
+        left: -50%;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .battery {
+        flex-direction: column;
+        width: min(100%, 300px) !important;
+        height: 400px;
+    }
+
+    .slogan_battery:after {
+        width: 70% !important;
+    }
+    .infor_battery {
+        width: auto;
+        height: calc(100% - 169px);
+        margin: 0;
+        justify-content: center;
+    }
+
+    .img_battery {
+        width: 100%;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .child-img-battery {
+        top: 130px;
+        right: 25px;
+        left: unset;
+    }
+    .img_battery img {
+        padding: 15px 0;
+    }
+    .number-battery input {
+        width: 90px;
+    }
+}
+input[type="submit"][name="submitBattery"] {
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgb(58 96 90) 0%, rgb(114 176 170) 100%);
+    color: #fff;
+}
+.modal-header {
+    border: none;
+    justify-content: center;
+    padding-bottom: 8px;
+}
+
+.modal-body {
+    padding-top: 8px;
+}
+
+form#battery .form-floating {
+    width: 90%;
+}

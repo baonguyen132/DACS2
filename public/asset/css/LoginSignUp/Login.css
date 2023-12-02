@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300&display=swap");
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Raleway", sans-serif !important;
+    height: 100vh;
+    position: relative;
+}
+.view {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background: linear-gradient(225deg, #19ff8f, #004953);
+}
+
+.view::before {
+    content: "";
+    position: absolute;
+    left: 34%;
+    width: 65px;
+    height: 65px;
+    top: 10%;
+    background: white;
+    box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 #888;
+    transform: rotate(45deg);
+    border-radius: 10px;
+    filter: blur(10px);
+}
+
+.view::after {
+    content: "";
+    position: absolute;
+    left: 34%;
+    width: 65px;
+    height: 65px;
+    top: 10%;
+    background: white;
+    transform: rotate(45deg);
+    z-index: 1;
+    border-radius: 10px;
+}
+.content {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 #888;
+    justify-content: center;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+@media only screen and (min-width: 1800px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .view {
+        width: 1800px;
+
+        height: 900px !important;
+        border-radius: 10px;
+
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .view {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content {
+        width: min(100%, 460px);
+        height: 85%;
+        border-radius: 8px;
+        background: #ffffff33;
+        z-index: 1;
+        box-shadow: none;
+    }
+
+    .content form {
+        height: 100%;
+    }
+
+    .view::before {
+        display: none;
+    }
+    .view::after {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .content {
+        height: 100%;
+    }
+}
+.row.my-3.title {
+    justify-content: center;
+    text-align: center;
+    font-weight: 500 !important;
+    width: 100%;
+    margin-left: 0;
+}
+.row.my-3.avata {
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+}
+.row.my-3.avata img {
+    width: max(25%, 160px);
+}
+.row.my-3.title b {
+    font-size: 50px;
+}
+
+.input-group {
+    height: 50px;
+}
+.content form {
+    width: min(100%, 800px);
+    height: 80%;
+}
+.username,
+.password {
+    width: 100%;
+    margin-left: 0px !important;
+    justify-content: space-around;
+}
+
+.submit {
+    margin: 0px;
+    width: 100%;
+    justify-content: space-around;
+    margin: 0px !important;
+}
+
+.submit button {
+    font-size: 1.2rem;
+    border-radius: 12px;
+    width: 100%;
+    background: none;
+    border: 3px solid #1ca586;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.6s;
+    height: 50px;
+    z-index: 1;
+}
+
+.submit button::before,
+.submit button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background: #1ca586;
+    z-index: -1;
+    transition: all 0.5s;
+}
+.submit button::before {
+    left: 0;
+}
+.submit button::after {
+    right: 0;
+}
+
+.submit button:hover {
+    color: white;
+}
+.submit button:hover::before {
+    width: 50%;
+}
+.submit button:hover::after {
+    width: 50%;
+}
+
+.row.my-3.ForgotPass-SignUp {
+    width: 100%;
+    margin: 0px;
+    justify-content: center;
+}
+.row.my-3.ForgotPass-SignUp .row {
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.ForgotPass-SignUp a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    transition: 0.5s all;
+    position: relative;
+    display: inline-block;
+}
+
+.ForgotPass-SignUp a:hover {
+    color: darkgreen;
+}
+
+.ForgotPass-SignUp a::before {
+    content: "";
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    border: 0px solid black;
+    width: 0%;
+    transition: 0.5s all;
+}
+.ForgotPass-SignUp a:hover::before {
+    width: 100%;
+    border: 1px solid #1a9a7c;
+}
+
+.col-sm-5.signup a {
+    float: right;
+}
+.forgotpass {
+    width: 65% !important;
+    height: 30px;
+}
+.signup {
+    width: 35% !important;
+}
+.signup a {
+    float: right;
+}
+@media only screen and (max-width: 900px) {
+    .username,
+    .password {
+        flex-direction: column;
+    }
+
+    .username .col-sm-8,
+    .password .col-sm-8 {
+        width: 100%;
+    }
+
+    .submit {
+        flex-direction: column;
+    }
+    .row.my-3.submit .col-sm-8 {
+        width: 100%;
+    }
+    .row.my-3.ForgotPass-SignUp .col-sm-8 {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .content form {
+        height: 100%;
+    }
+}

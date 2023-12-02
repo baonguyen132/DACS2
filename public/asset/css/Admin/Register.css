@@ -1,0 +1,486 @@
+.datebirth {
+    /* font-size: 1rem; */
+    padding: 12px 8px;
+    border-color: #8888;
+    border-radius: 6px;
+    height: 58px;
+    border: 1px solid #ced4da;
+    width: 100%;
+}
+
+#labeldate,
+label#name,
+label#cid,
+label#gmail {
+    font-size: 18px;
+    text-align: center;
+    /* line-height: 60px; */
+    /* width: 150px; */
+    margin: 0;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: #10a95a;
+    /* height: 100%; */
+    /* display: flex; */
+    align-items: center;
+}
+#login {
+    margin: 0 10px;
+    font-size: 18px;
+    line-height: 60px;
+    font-weight: 400;
+}
+.row {
+    margin-bottom: 10px;
+}
+.row.rowcontent
+    form
+    input[type="submit"][name="importaccount"][value="Import account"] {
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: bold;
+    background: #10a95a;
+    border: none;
+    color: white;
+    height: 45px;
+}
+input#fullname,
+input#citizen_identification,
+input#email {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 20px;
+}
+
+/* register */
+.modal input[type="text"] {
+    margin: 10px 0;
+}
+input[name="import_acount_first"].btn {
+    margin: 5px 0 0;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: bold;
+    background: #10a95a;
+    color: white;
+}
+
+i.far.fa-window-close {
+    font-size: 20px;
+    color: red;
+}
+.modal h5 {
+    margin: 15px 0 5px 0px;
+    font-weight: bolder;
+    color: #10a95a;
+}
+.modal .row {
+    margin-bottom: 0px;
+}
+button.btn {
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: #10a95a;
+    color: white;
+}
+ladel {
+    font-weight: bolder;
+    color: #10a95a;
+}
+h4.modal-title {
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: #10a95a;
+}
+button.btnclose {
+    width: 50px;
+    height: 50px;
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: transparent;
+    color: #10a95a;
+}
+
+button.btn:hover {
+    color: white;
+    border: none;
+    background: #10a95a;
+}
+.row.rowcontent table thead {
+    color: black;
+}
+body.dark .row.rowcontent table {
+    color: white;
+}
+body.dark .row.rowcontent table thead {
+    color: white;
+}
+
+body.dark .row.rowcontent tbody tr:hover {
+    color: black;
+    background: white !important;
+}
+
+body.dark #login {
+    color: white;
+}
+body.dark #labeldate {
+    /* color: white; */
+}
+.fa,
+.far,
+.fas {
+    font-family: "Font Awesome 5 Free" !important;
+}
+.fa-edit:before {
+    color: #10a95a;
+}
+
+.createaccount {
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: bold;
+    background: #10a95a;
+    border: none;
+    color: white;
+    height: 45px;
+}
+.createaccount:hover {
+    color: white;
+}
+.modal-footer button {
+    border: none;
+}
+
+input[name="delete_account"] {
+    color: white;
+    border: none;
+    background: #10a95a;
+}
+input[name="delete_account"]:hover {
+    background: #10a95a;
+    border: none;
+}
+i.bx.bx-edit::before {
+    font-size: 30px;
+    color: #10a95a;
+}
+i.bx.bx-message-alt-x::before {
+    color: red;
+    font-size: 30px;
+}
+.table-responsive a {
+    color: black;
+    text-decoration: none;
+}
+
+body.dark .row.rowcontent table a {
+    color: white;
+}
+
+body.dark .row.rowcontent tbody tr:hover a {
+    color: black !important;
+}
+.row.rowcontent
+    form
+    input[type="submit"][name="importaccount"][value="Import account"] {
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: bold;
+    background: #10a95a;
+    border: none;
+    color: white;
+    height: 45px;
+}
+/* profile */
+
+.profile_user {
+    width: 100%;
+    background: var(--slidebar-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    display: flex;
+    position: relative;
+    z-index: 2;
+    justify-content: space-between;
+    transition: var(--tran-04);
+    padding: 0px;
+}
+
+.image_profile {
+    height: 670px;
+    width: 330px;
+    position: relative;
+    /* */
+    z-index: 1;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-right: 120px;
+    background-size: cover;
+    background-position: 45%;
+    display: flex;
+    justify-content: center;
+}
+#image_profile {
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    background: var(--slidebar-color);
+    transition: var(--tran-04);
+}
+
+.information_profile {
+    /* width: 730px; */
+    /* border: 1px solid; */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.avata_div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#avata_image_profile {
+    background-position: 40% 40%;
+}
+.avata_image_profile {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    border-radius: 50%;
+    top: 60px;
+    left: 150px;
+    background: white;
+    background-size: cover;
+    background-position: 20% 45%;
+    border: 10px solid var(--slidebar-color);
+    transition: var(--tran-04);
+}
+
+#profile_user:after {
+    content: "";
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid;
+    top: 60px;
+    left: 150px;
+    z-index: -1;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+.row.information {
+    width: 100%;
+    margin: 20px 0px !important;
+    color: var(--text-color);
+}
+
+.information_profile .col-xl-7.p-0 > div,
+.information_profile .col-xl-5.p-0 > div {
+    display: flex;
+    margin: 20px 0px;
+    align-items: center;
+}
+.information_profile b {
+    color: #10a95a;
+}
+.import_account_first button,
+.delete_account_first button {
+    padding: 5px 20px;
+    font-size: 20px;
+    border: none;
+
+    color: white;
+    border-radius: 5px;
+    font-weight: bolder;
+    transition: var(--tran-03);
+}
+
+button.import {
+    background: #10a95a;
+    margin-right: 10px;
+}
+button.delete {
+    background: red;
+    margin-left: 10px;
+}
+
+.import_account_first button:hover {
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+.delete_account_first button:hover {
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+.button_information {
+    display: flex;
+    margin: 20px 0px;
+}
+.information_back {
+    width: calc(100% - 450px);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+.go_back {
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+}
+.go_back a {
+    text-decoration: none;
+    color: #10a95a;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.go_back i {
+    margin: 0px 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .profile_user {
+        flex-direction: column;
+    }
+    .image_profile {
+        margin-right: 0px;
+
+        width: 100%;
+
+        border-top-left-radius: 10px;
+
+        border-top-right-radius: 10px;
+
+        height: 325px;
+
+        border-bottom-left-radius: 0px;
+
+        margin-bottom: 85px;
+    }
+    #profile_user:after {
+        display: none;
+    }
+    .avata_image_profile {
+        left: 0px;
+
+        width: 250px;
+
+        height: 250px;
+
+        top: 150px;
+    }
+    .information_back {
+        width: 100%;
+    }
+    .avata_div {
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .image_profile {
+        height: 200px;
+        margin-bottom: 64px;
+    }
+    .avata_div {
+        width: 180px;
+    }
+    .avata_image_profile {
+        width: 180px;
+        height: 180px;
+        top: 80px;
+    }
+    .one_employee {
+        flex-direction: column;
+
+        align-items: center;
+    }
+    .image_employee {
+        border-right: 0px dashed !important;
+
+        width: 100% !important;
+
+        margin-bottom: 15px;
+    }
+    .information {
+        width: 100% !important;
+
+        text-align: center;
+    }
+}
+
+/* list */
+
+.employee {
+    /* width: 400px; */
+    margin-bottom: 20px;
+}
+.one_employee {
+    width: 100%;
+    height: 100%; /* border: 1px solid; */
+    padding: 0px;
+    display: flex;
+    background: var(--slidebar-color);
+    border-radius: 10px;
+    padding: 20px 0px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    transition: var(--tran-04);
+}
+.image_employee {
+    width: 160px;
+    height: 100%; /* border: 1px solid; */
+    display: flex;
+    justify-content: center;
+    border-right: 2px dashed var(--text-color); /* position: relative; */
+}
+.information {
+    width: 216px;
+    height: 100%;
+    /* border: 1px solid; */
+    padding: 0px 10px;
+    color: var(--text-color);
+}
+.avata-employee {
+    width: 120px;
+    height: 120px;
+    /* border: 1px solid; */
+    border-radius: 50%;
+    /* position: absolute; */
+    /* top: 15px; */
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.row.list_employee {
+    margin-bottom: 0px;
+}
+.information a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+.information b {
+    color: #10a95a;
+    font-weight: bolder;
+}
+.information p,
+h5 {
+    margin-bottom: 10px;
+}
+
+.information h5 {
+    color: #10a95a;
+    font-weight: bolder;
+}
+.information button {
+    border: none;
+    width: 65px;
+    height: 35px;
+    border-radius: 5px;
+    padding: 0px 11px;
+    background: #10a95a;
+}

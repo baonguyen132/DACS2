@@ -1,0 +1,378 @@
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.batterys {
+    position: relative;
+}
+
+hr {
+    height: 3.5px;
+    width: 40%;
+    margin: 10px 0;
+    background-color: aqua;
+    border: none;
+    outline: none;
+}
+
+/* =======================development========================= */
+
+.animate1 {
+    transform: translateX(-100%);
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    filter: blur(5px);
+}
+
+.animate2 {
+    transform: translateX(-100%);
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    filter: blur(5px);
+    transition-delay: 100ms;
+}
+
+.animate3 {
+    transform: translateX(-100%);
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    filter: blur(5px);
+    transition-delay: 200ms;
+}
+
+.animate4 {
+    transform: translateX(-100%);
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    filter: blur(5px);
+    transition-delay: 300ms;
+}
+
+.active1 {
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+}
+
+.active2 {
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+}
+
+.active3 {
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+}
+
+.active4 {
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+}
+
+.development {
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(360deg, #1b4d3e, #004953);
+}
+
+.development span {
+    color: #fff;
+    font-weight: 600;
+}
+
+.development .card {
+    background-color: rgba(130, 128, 128, 0.4);
+    padding: 0px;
+    margin: 15px !important;
+}
+
+.development .card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.development .card-title {
+    color: #fff;
+    text-align: center;
+}
+
+.development .card-text + div > div {
+}
+
+.development .card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.bd-example {
+    z-index: 2;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    /* top: 26px; */
+    flex-direction: row;
+}
+
+.card-text {
+    overflow-y: scroll;
+    height: 94px;
+}
+
+.card-text,
+.card-text + div {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    line-height: 1.5;
+    padding-right: 10px;
+}
+
+.card-img-overlay {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 336px;
+}
+
+.card-text + div > div {
+    border-radius: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 130px;
+    padding: 7px 10px;
+    padding-top: 6px;
+    align-items: center;
+    justify-content: space-around;
+    align-content: flex-start;
+    flex-direction: row;
+}
+
+/* =========================scrollbar_txt============================*/
+
+/* Firefox */
+* {
+    scrollbar-width: 4px !important;
+    scrollbar-color: #d2f9c4 hsl(0, 0%, 85%);
+}
+
+/* Chrome, Edge and Safari */
+.card-text::-webkit-scrollbar {
+    width: 10px;
+    width: 10px;
+}
+.card-text::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #dfe9eb;
+}
+
+.card-text::-webkit-scrollbar-track:hover {
+    background-color: #b8c0c2;
+}
+
+.card-text::-webkit-scrollbar-track:active {
+    background-color: #b8c0c2;
+}
+
+.card-text::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #8e9d88;
+}
+
+.card-text::-webkit-scrollbar-thumb:hover {
+    background-color: #bef4aa;
+}
+
+.card-text::-webkit-scrollbar-thumb:active {
+    background-color: #62a34b;
+}
+
+.txt-development div {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+[id="heart"] {
+    position: absolute;
+    left: -100vw;
+}
+
+[for="heart"] {
+    color: #aab8c2;
+    cursor: pointer;
+    font-size: 22px;
+    align-self: center;
+    transition: color 0.2s ease-in-out;
+}
+
+[for="heart"]:hover {
+    color: grey;
+}
+
+[for="heart"]::selection {
+    color: none;
+    background: transparent;
+}
+
+[for="heart"]::moz-selection {
+    color: none;
+    background: transparent;
+}
+
+[id="heart"]:checked + label {
+    color: #f90737;
+    will-change: font-size;
+    animation: heart 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+}
+
+/**/
+
+[id="heart1"] {
+    position: absolute;
+    left: -100vw;
+}
+
+[for="heart1"] {
+    color: #aab8c2;
+    cursor: pointer;
+    font-size: 26px;
+    align-self: center;
+    transition: color 0.2s ease-in-out;
+}
+
+[for="heart1"]:hover {
+    color: grey;
+}
+
+[for="heart1"]::selection {
+    color: none;
+    background: transparent;
+}
+
+[for="heart1"]::moz-selection {
+    color: none;
+    background: transparent;
+}
+
+[id="heart1"]:checked label {
+    color: #f90737;
+    will-change: font-size;
+    animation: heart 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+}
+
+[id="heart1"] {
+    position: absolute;
+    left: -100vw;
+}
+
+[for="heart1"] {
+    color: #aab8c2;
+    cursor: pointer;
+    font-size: 22px;
+    align-self: center;
+    transition: color 0.2s ease-in-out;
+}
+
+[for="heart1"]:hover {
+    color: grey;
+}
+
+[for="heart1"]::selection {
+    color: none;
+    background: transparent;
+}
+
+[for="heart1"]::moz-selection {
+    color: none;
+    background: transparent;
+}
+
+[id="heart1"]:checked + label {
+    color: #f90737;
+    will-change: font-size;
+    animation: heart 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+}
+
+[id="heart2"] {
+    position: absolute;
+    left: -100vw;
+}
+
+[for="heart2"] {
+    color: #aab8c2;
+    cursor: pointer;
+    font-size: 22px;
+    align-self: center;
+    transition: color 0.2s ease-in-out;
+}
+
+[for="heart2"]:hover {
+    color: grey;
+}
+
+[for="heart2"]::selection {
+    color: none;
+    background: transparent;
+}
+
+[for="heart2"]::moz-selection {
+    color: none;
+    background: transparent;
+}
+
+[id="heart2"]:checked + label {
+    color: #f90737;
+    will-change: font-size;
+    animation: heart 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+}
+
+[id="heart3"] {
+    position: absolute;
+    left: -100vw;
+}
+
+[for="heart3"] {
+    color: #aab8c2;
+    cursor: pointer;
+    font-size: 22px;
+    align-self: center;
+    transition: color 0.2s ease-in-out;
+}
+
+[for="heart3"]:hover {
+    color: grey;
+}
+
+[for="heart3"]::selection {
+    color: none;
+    background: transparent;
+}
+
+[for="heart3"]::moz-selection {
+    color: none;
+    background: transparent;
+}
+
+[id="heart3"]:checked + label {
+    color: #f90737;
+    will-change: font-size;
+    animation: heart 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+}
+
+/*===========================================================*/
+
+@keyframes heart {
+    0%,
+    17.5% {
+        font-size: 0;
+    }
+}
