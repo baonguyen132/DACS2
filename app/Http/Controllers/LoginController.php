@@ -7,6 +7,7 @@ use App\Http\Requests\LoginRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Laravel\Socialite\Facades\Socialite;
 
@@ -40,7 +41,7 @@ class LoginController extends Controller
             return redirect(route("login.optionLogin"));
         }
 
-        Session::flash('error', 'Login fail');
+        Session::flash('result', 'Login fail');
 
         return redirect()->back();
     }
@@ -50,15 +51,21 @@ class LoginController extends Controller
     }
     function loginGmailCallback()
     {
-        $user = Socialite::driver('google')->user();
+        $userPovider = Socialite::driver('google')->user();
 
-        $user = User::where("email", "=", $user->getEmail())->first();
+        $user = User::where("email", "=", $userPovider->getEmail())->first();
 
-        if ($user != null) {
+        if ($user == null) {
 
-        } else {
-
+            $user = User::create([
+                "name" => $userPovider->getName(),
+                "email" => $userPovider->getEmail(),
+                'password' => Hash::make("Bae-12345"),
+                "token" => $userPovider->getId(),
+                'status' => '50'
+            ]);
         }
+
         Auth::login($user);
 
         return redirect(route("login.optionLogin"));
@@ -95,6 +102,17 @@ class LoginController extends Controller
             Session::flash('result', 'thất bại');
         }
 
+        return redirect(route("login.get"));
+    }
+
+    function updateInformation()
+    {
+        return view("loginsignup.layout.updateInformation", ["title" => "Sign Up"]);
+    }
+    function storeInformation(Request $request)
+    {
+        $user = Auth::user();
+        User::where("id", "=", $user->id)->update(["cccd" => $request->cid, "dob" => $request->date, "gender" => $request->gender, "address" => $request->address, "status" => 5, "token" => null]);
         return redirect(route("login.get"));
     }
 }
