@@ -35,7 +35,7 @@ class SignUpController extends Controller
             'status' => "50"
         ]);
 
-        Mail::send('LoginSignUp.layout.mail', ["token" => $request->_token, 'fullname' => $request->firstname . " " . $request->lastname, 'username' => $request->email, 'password' => $request->password, 'cccd' => $request->cid, 'dob' => $request->date], function ($email) use ($request) {
+        Mail::send('LoginSignUp.layout.mail', ["token" => $request->_token, 'fullname' => $request->firstname . " " . $request->lastname, 'username' => $request->emails, 'password' => $request->password, 'cccd' => $request->cid, 'dob' => $request->date], function ($email) use ($request) {
             $email->subject("Xác nhận tài khoản");
             $email->to($request->emails);
         });
