@@ -24,7 +24,7 @@ class EmployeerConttroler extends Controller
     {
 
         $page = "index";
-        $data = User::where("status", "<>", 5)->where("status", "<>", 50)->get();
+        $data = User::where("status", "<>", 5)->where("status", "<>", 50)->where("status", "<>", 0)->get();
 
         $user = Auth::user();
         return view("admin.main.layout.register", compact("page", "data", "user"));
