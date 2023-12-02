@@ -55,7 +55,7 @@ class LoginController extends Controller
         $user = User::where("email", "=", $user->getEmail())->first();
 
         if ($user != null) {
-            w;
+
         } else {
 
         }
