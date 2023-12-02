@@ -35,14 +35,14 @@ Route::get("/logout", [SignUpController::class, "logout"])->name("login.logout")
 
 
 
-Route::prefix("cart")->middleware("auth")->group(function () {
+Route::prefix("cart")->middleware(["auth", "checkInformation"])->group(function () {
     Route::get("/", [CartController::class, "index"])->name("cart.index");
     Route::post("/store", [CartController::class, "store"])->name("cart.store");
     Route::get("/qr/{id}", [CartController::class, "viewQR"])->name("cart.qr");
 
 
 });
-Route::prefix("history")->middleware("auth")->group(function () {
+Route::prefix("history")->middleware(["auth", "checkInformation"])->group(function () {
     Route::get("page={page}", [HistoryUserController::class, "index"])->name("historyuser.index");
     Route::get("history={id}", [HistoryUserController::class, "detail"])->name("historyuser.detail");
 
@@ -50,17 +50,17 @@ Route::prefix("history")->middleware("auth")->group(function () {
 
 Route::prefix("blog")->group(function () {
     Route::get("", [BlogController::class, "index"])->name("blog.index");
-    Route::post("/store", [BlogController::class, "store"])->middleware("auth")->name("blog.store");
+    Route::post("/store", [BlogController::class, "store"])->middleware(["auth", "checkInformation"])->name("blog.store");
 
 });
 
-Route::prefix("information")->middleware("auth")->group(function () {
+Route::prefix("information")->middleware(["auth", "checkInformation"])->group(function () {
     Route::get("", [InformationController::class, "index"])->name("information.index");
     Route::post("update", [InformationController::class, "update"])->name("information.update");
 
 });
 
-Route::prefix("exchange")->middleware("auth")->group(function () {
+Route::prefix("exchange")->middleware(["auth", "checkInformation"])->group(function () {
     Route::get("", [ExchangeController::class, "getBranch"])->name("exchange.branch");
     Route::get("voucher/{idbranch}-page={page}", [ExchangeController::class, "getVoucher"])->name("exchange.voucher");
     Route::get("voucher{idvoucher}", [ExchangeController::class, "exchange"])->name("exchange.exchangeVoucher");
@@ -80,8 +80,8 @@ Route::prefix("login")->group(function () {
             Route::get("/callback", [LoginController::class, "loginGmailCallback"])->name("login.socialite.gmail.callback");
         });
 
-
-
+        Route::get("/updateInformation", [LoginController::class, "updateInformation"])->middleware(["auth", "updateInformation"])->name("login.updateInformation");
+        Route::post("/updateInformation", [LoginController::class, "storeInformation"])->middleware(["auth", "updateInformation"])->name("login.updateInformation.post");
 
     });
 
