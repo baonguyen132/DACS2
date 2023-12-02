@@ -17,10 +17,13 @@ class LogionOptionMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::user()->status == 5) {
+        $status = Auth::user()->status;
 
+        if ($status == 5) {
             return redirect(route("home"));
 
+        } elseif ($status <= 0 || $status == 50) {
+            return redirect(route("login.get"));
         }
 
         return $next($request);

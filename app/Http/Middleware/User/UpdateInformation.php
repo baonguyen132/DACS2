@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Middleware\Admin;
+namespace App\Http\Middleware\User;
 
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class AuthenticateMiddleware
+class UpdateInformation
 {
     /**
      * Handle an incoming request.
@@ -17,9 +17,8 @@ class AuthenticateMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        $status = Auth::user()->status;
-        if ($status <= 0 || $status == 5 || $status == 50) {
-
+        $user = Auth::user();
+        if ($user->cccd != null) {
             return redirect(route("login.get"));
         }
         return $next($request);

@@ -67,6 +67,9 @@ class Kernel extends HttpKernel
         'login' => \App\Http\Middleware\LoginMiddleware::class,
         'loginOption' => \App\Http\Middleware\LogionOptionMiddleware::class,
         'status' => \App\Http\Middleware\Admin\AuthenticateMiddleware::class,
-        'register' => \App\Http\Middleware\Admin\RegisterMiddleware::class
+        'register' => \App\Http\Middleware\Admin\RegisterMiddleware::class,
+
+        'updateInformation' => \App\Http\Middleware\User\UpdateInformation::class,
+        'checkInformation' => \App\Http\Middleware\User\CheckInformation::class,
     ];
 }
