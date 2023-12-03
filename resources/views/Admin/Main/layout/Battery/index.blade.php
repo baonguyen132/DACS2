@@ -108,7 +108,13 @@
 
       </div>
 </div>
-
+<div class="viewInsert">
+    <button type = "button" class="viewInsertButton">
+        <a href="{{route("battery.create")}}">
+            <i class='bx bx-plus'></i>
+        </a>
+    </button>
+</div>
 
 
 
