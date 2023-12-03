@@ -32,7 +32,9 @@
             </div>
         </div>
     @empty
-
+        <div class="result">
+            <b>Hiện tại không bạn chưa có voucher</b>
+        </div>
     @endforelse
 
 
