@@ -80,6 +80,11 @@
                     </div>
                 </div>
             </div>
+            <div class="row my-3 loginSoical">
+                <div class="col-sm-8">
+                    <a href="{{route("login.socialite.gmail")}}"><img src="https://kgo.googleusercontent.com/profile_vrt_raw_bytes_1587515358_10512.png" alt=""></a>
+                </div>
+            </div>
         </form>
 
 
@@ -87,17 +92,4 @@
     </div>
 
 </div>
-
-<div class="loginGmail">
-    <a href="{{route("login.socialite.gmail")}}">Login gmail</a>
-
-</div>
-
-
-
-
-
-
-
-
 @endsection

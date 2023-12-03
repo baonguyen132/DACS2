@@ -240,6 +240,15 @@ body {
 .signup a {
     float: right;
 }
+.loginSoical {
+    width: 100%;
+    justify-content: center;
+    margin: 0px;
+}
+.loginSoical img {
+    width: 50px;
+    height: 50px;
+}
 @media only screen and (max-width: 900px) {
     .username,
     .password {
