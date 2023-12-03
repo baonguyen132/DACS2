@@ -30,7 +30,7 @@ class SignUpController extends Controller
             'dob' => $request->date,
             'token' => $request->_token,
             'pob' => "",
-            'gender' => $request->gender,
+            'gender' => ucfirst($request->gender),
             'address' => $request->address,
             'status' => "50"
         ]);

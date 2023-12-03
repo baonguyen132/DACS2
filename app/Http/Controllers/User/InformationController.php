@@ -26,7 +26,7 @@ class InformationController extends Controller
     {
         $id = Auth::user()->id;
 
-        User::where("id", "=", $id)->update(["name" => $request->fname, "dob" => $request->dob, "pob" => $request->pob, "address" => $request->address, "gender" => $request->gender_information]);
+        User::where("id", "=", $id)->update(["name" => $request->fname, "dob" => $request->dob, "pob" => $request->pob, "address" => $request->address, "gender" => ucfirst($request->gender_information)]);
 
         return redirect()->back();
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Client\UpdateInformationRequest;
 use App\Http\Requests\LoginRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -109,10 +110,18 @@ class LoginController extends Controller
     {
         return view("loginsignup.layout.updateInformation", ["title" => "Sign Up"]);
     }
-    function storeInformation(Request $request)
+    function storeInformation(UpdateInformationRequest $request)
     {
         $user = Auth::user();
-        User::where("id", "=", $user->id)->update(["cccd" => $request->cid, "dob" => $request->date, "gender" => $request->gender, "address" => $request->address, "status" => 5, "token" => null]);
+        User::where("id", "=", $user->id)->update([
+            "cccd" => $request->cid,
+            "dob" => $request->date,
+            "gender" => ucfirst($request->gender),
+            "address" => $request->address,
+            "status" => 5,
+            "token" => null
+        ]);
         return redirect(route("login.get"));
     }
+
 }
