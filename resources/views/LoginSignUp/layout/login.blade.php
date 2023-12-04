@@ -54,11 +54,15 @@
 
             @csrf
 
-            @if (Session::has("result"))
-                {{
-                    Session::get("result")
-                }}
-            @endif
+            <div class="row result">
+                <div class = "col-sm-8">
+                    @if (Session::has("result"))
+                        {{
+                            Session::get("result")
+                        }}
+                    @endif
+                </div>
+            </div>
 
             <div class="row my-3 submit">
 

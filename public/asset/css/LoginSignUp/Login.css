@@ -249,6 +249,12 @@ body {
     width: 50px;
     height: 50px;
 }
+.result {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: 0px;
+}
 @media only screen and (max-width: 900px) {
     .username,
     .password {

@@ -43,7 +43,7 @@ class LoginMiddleware
                         if ($user->cccd == null) {
                             return redirect(route("login.updateInformation"));
                         } else {
-                            $this->logout($request, 'tk chx click hoạt');
+                            $this->logout($request, 'tài khoản chx click hoạt');
                         }
                     } else {
                         return redirect(route("home"));
@@ -51,10 +51,10 @@ class LoginMiddleware
                 }
             } else {
                 if ($status == 0) {
-                    $this->logout($request, 'tk chx click hoạt');
+                    $this->logout($request, 'tài khoản click hoạt');
 
                 } elseif ($status == -1) {
-                    $this->logout($request, 'tk đã bị khoá');
+                    $this->logout($request, 'tài khoản đã bị khoá');
 
                 }
             }
