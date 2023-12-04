@@ -106,15 +106,15 @@ Route::prefix('/admin')->middleware(['auth', 'status'])->group(function () {
 
     Route::middleware(['register'])->group(function () {
         Route::prefix('register')->group(function () {
-            Route::get('/', [EmployeerConttroler::class, "index"])->name('register.index');
+            Route::get('/detail-{detail}', [EmployeerConttroler::class, "index"])->name('register.index')->whereIn("detail", ["employee", "customer", "unconfirmed"]);
 
             Route::get('/create', [EmployeerConttroler::class, "create"])->name('register.create');
             Route::post('/create', [EmployeerConttroler::class, "store"])->name('register.store');
 
-            Route::get('/profile/{id}', [EmployeerConttroler::class, "show"])->name('register.show');
+            Route::get('/profile/{detail}-{id}', [EmployeerConttroler::class, "show"])->name('register.show');
 
             Route::post('/{type}/{id}', [EmployeerConttroler::class, "update"])->name('register.update');
-            Route::post('/profile/delete/{id}', [EmployeerConttroler::class, "destroy"])->name('register.destroy');
+            Route::post('/profile/delete/{detail}-{id}', [EmployeerConttroler::class, "destroy"])->name('register.destroy');
         });
 
 
@@ -133,7 +133,7 @@ Route::prefix('/admin')->middleware(['auth', 'status'])->group(function () {
 
     Route::prefix('voucher')->group(function () {
         Route::get('/', [BranchController::class, "index"])->name("voucher.index");
-        Route::get('/branch{id}-page={page}', [VoucherController::class, "index"])->name("voucher.index.battery");
+        Route::get('/branch{id}-page={page}', [VoucherController::class, "index"])->name("voucher.index.battery")->whereNumber(["id", "page"]);
 
         Route::get('/createBranch', [BranchController::class, "createBranch"])->name("voucher.createBranch");
         Route::post('/createBranch', [BranchController::class, "storeBranch"])->name("voucher.storeBranch");
