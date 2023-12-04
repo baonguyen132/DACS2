@@ -34,10 +34,10 @@
             </a>
           </li>
           <li class="nav-links">
-            <a href="{{route("register.index")}}">
+            <a href="{{route("register.index" , ["detail" => "employee"]) }}">
               <i class="material-icons icon">person</i>
               <span class="text nav-text">
-                  Employee
+                  User
               </span>
             </a>
           </li>

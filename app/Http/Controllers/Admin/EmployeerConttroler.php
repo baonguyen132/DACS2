@@ -20,14 +20,20 @@ class EmployeerConttroler extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($detail)
     {
 
         $page = "index";
-        $data = User::where("status", "<>", 5)->where("status", "<>", 50)->where("status", "<>", 0)->get();
+        if ($detail === "employee") {
+            $data = User::whereIn("status", [1, 2, 3, 4])->get();
+        } elseif ($detail === "customer") {
+            $data = User::where("status", "=", 5)->get();
+        } else {
+            $data = User::whereIn("status", [0, 50])->get();
+        }
 
         $user = Auth::user();
-        return view("admin.main.layout.register", compact("page", "data", "user"));
+        return view("admin.main.layout.register", compact("page", "data", "user", "detail"));
     }
 
     /**
@@ -87,21 +93,35 @@ class EmployeerConttroler extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($detail, $id)
     {
         //
         if ($id == Auth::user()->id) {
             return redirect(route("setting.index"));
         } else {
-            $employee = (User::where("id", "=", $id)->get())[0];
-            if ($employee->status != 0) {
-                $user = Auth::user();
-
-                $page = "show";
-                return view("admin.main.layout.register", compact("page", "employee", "user"));
+            if ($detail == "employee") {
+                $in = [1, 2, 3, 4];
+            } elseif ($detail == "customer") {
+                $in = [5];
             } else {
-                return redirect(route("register.index"));
+                $in = [0, 50];
             }
+            $employee = (User::where("id", "=", $id)->whereIn("status", $in)->get());
+
+            if (isset($employee[0])) {
+                $employee = $employee[0];
+                if ($employee->status != 0) {
+                    $user = Auth::user();
+
+                    $page = "show";
+                    return view("admin.main.layout.register", compact("page", "employee", "user", "detail"));
+                } else {
+                    return redirect(route("register.index", ["detail" => "unconfirmed"]));
+                }
+            } else {
+                return redirect(route("register.index", ["detail" => $detail]));
+            }
+
         }
 
     }
@@ -143,10 +163,10 @@ class EmployeerConttroler extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($detail, $id)
     {
         User::where("id", "=", $id)->delete();
-        return redirect(route("register.index"));
+        return redirect(route("register.index", ["detail" => $detail]));
 
     }
 }

@@ -62,7 +62,8 @@
                 </div>
             </div>
 
-            @if ($employee->status <=3 && $user->status >= 3 && $employee->status !=  $user->status )
+
+            @if ($employee->status <=3 || $employee->status == 5 && $user->status >= 3 && $employee->status !=  $user->status )
                 <div class="button_information">
                     <div class = "import_account_first">
                         <button class="import" data-bs-toggle = "modal" data-bs-target = "#add_access" >Import</button>
@@ -77,14 +78,15 @@
 
 
         </div>
+
         <div class = "go_back">
-            <a href="{{route("register.index")}}" >Go back <i class='bx bxs-right-arrow-circle'></i></a>
+            <a href="{{route("register.index" , ["detail" => $detail])}}" >Go back <i class='bx bxs-right-arrow-circle'></i></a>
         </div>
     </div>
 
 </div>
 
-@if ($employee->status <=3 && $user->status >= 3 && $employee->status !=  $user->status)
+@if ($employee->status <=3 || $employee->status == 5 && $user->status >= 3 && $employee->status !=  $user->status)
     <div class = "modalclass" >
         <div class = 'modal fade' id ='add_access'>
             <div class ='modal-dialog'>
@@ -95,19 +97,28 @@
                     </div>
                     <div class='modal-body'>
                         <form method = 'POST' action="{{route("register.update" , ['id' => $employee->id , 'type' => 'grant_permissions'])}}">
-                            <ladel for = 'cccd_account' class="">Citizen ID</ladel>
-                            <input id='cccd_account' type ='text' disabled class='form-control' value='{{$employee->cccd}}'/>
+                            @if ($employee->status <=3)
+                                <ladel for = 'cccd_account' class="">Citizen ID</ladel>
+                                <input id='cccd_account' type ='text' disabled class='form-control' value='{{$employee->cccd}}'/>
 
-                            <ladel for = 'fullname_account' class="">Full name</ladel>
-                            <input id = 'fullname_account' type = 'text' class = 'form-control' disabled  value = '{{$employee->name}}' />
+                                <ladel for = 'fullname_account' class="">Full name</ladel>
+                                <input id = 'fullname_account' type = 'text' class = 'form-control' disabled  value = '{{$employee->name}}' />
 
-                            <ladel for = 'grant_permissions' class="">Grant permissions</ladel>
-                            <select name="grant_permissions" id = "grant_permissions" class="form-control" style="margin: 10px 0;">
-                                <option @if ($employee->status == -1) selected  @endif  value="-1">Account lock</option>
-                                <option @if ($employee->status == 1) selected  @endif value="1">Account limit</option>
-                                <option @if ($employee->status == 2) selected  @endif value="2">Viewing allowed</option>
-                                <option @if ($employee->status == 3) selected  @endif value="3">Editing allowed</option>
-                            </select>
+                                <ladel for = 'grant_permissions' class="">Grant permissions</ladel>
+                                <select name="grant_permissions" id = "grant_permissions" class="form-control" style="margin: 10px 0;">
+                                    <option @if ($employee->status == -1) selected  @endif  value="-1">Account lock</option>
+                                    <option @if ($employee->status == 1) selected  @endif value="1">Account limit</option>
+                                    <option @if ($employee->status == 2) selected  @endif value="2">Viewing allowed</option>
+                                    <option @if ($employee->status == 3) selected  @endif value="3">Editing allowed</option>
+                                    <option value="5">Customer</option>
+                                </select>
+                            @else
+                                <select name="grant_permissions" id = "grant_permissions" class="form-control" style="margin: 10px 0;">
+                                    <option  value="5">Customer</option>
+                                    <option  value="1">Account limit</option>
+                                </select>
+                            @endif
+
 
                             @csrf
 
@@ -131,7 +142,7 @@
                         <h4 class='modal-title'>Delete an account</h4>
                     </div>
                     <div class = 'modal-body'>
-                        <form method = 'POST' action="{{route("register.destroy" , ['id' => $employee->id ])}}">
+                        <form method = 'POST' action="{{route("register.destroy" , ['id' => $employee->id ,"detail" => $detail])}}">
                             <ladel for = 'cccd_accounts' class="">Citizen ID</ladel>
                             <input id='cccd_accounts' type ='text' disabled class='form-control' value='{{$employee->cccd}}'/>
 
@@ -142,10 +153,6 @@
 
                             <input style = 'margin-top: 10px;' type = 'submit' name = 'delete_account' value = 'Delete'  class = 'btn btn-primary'>
                         </form>
-
-
-
-
                     </div>
                     <div class = 'modal-footer'>
                         <button class = 'btn btn-primary' data-bs-dismiss = 'modal' type = 'button' >Close</button>
