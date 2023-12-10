@@ -86,13 +86,3 @@
     font-size: 25px;
     margin: 0 10px;
 }
-.result {
-    width: 100%;
-    text-align: center;
-    height: 50px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
-}

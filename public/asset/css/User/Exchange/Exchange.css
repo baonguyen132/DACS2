@@ -34,7 +34,16 @@
     margin: 0 10px;
     text-align: center;
 }
-
+.result {
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
 /* Tablet && PC low resolution */
 @media screen and (max-width: 1024px) {
     /* History */

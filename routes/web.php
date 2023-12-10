@@ -43,8 +43,8 @@ Route::prefix("cart")->middleware(["auth", "checkInformation"])->group(function 
 
 });
 Route::prefix("history")->middleware(["auth", "checkInformation"])->group(function () {
-    Route::get("page={page}", [HistoryUserController::class, "index"])->name("historyuser.index");
-    Route::get("history={id}", [HistoryUserController::class, "detail"])->name("historyuser.detail");
+    Route::get("page={page}", [HistoryUserController::class, "index"])->name("historyuser.index")->whereNumber("page");
+    Route::get("history={id}", [HistoryUserController::class, "detail"])->name("historyuser.detail")->whereNumber("id");
 
 });
 
@@ -62,10 +62,10 @@ Route::prefix("information")->middleware(["auth", "checkInformation"])->group(fu
 
 Route::prefix("exchange")->middleware(["auth", "checkInformation"])->group(function () {
     Route::get("", [ExchangeController::class, "getBranch"])->name("exchange.branch");
-    Route::get("voucher/{idbranch}-page={page}", [ExchangeController::class, "getVoucher"])->name("exchange.voucher");
+    Route::get("voucher/{idbranch}-page={page}", [ExchangeController::class, "getVoucher"])->name("exchange.voucher")->whereNumber(["idbranch", "page"]);
     Route::get("voucher{idvoucher}", [ExchangeController::class, "exchange"])->name("exchange.exchangeVoucher");
     Route::get("QR-{image}", [ExchangeController::class, "viewQR"])->name("exchange.viewQR");
-    Route::get("listVoucher/page={page}", [ExchangeController::class, "listVoucher"])->name("exchange.listVoucher");
+    Route::get("listVoucher/page={page}", [ExchangeController::class, "listVoucher"])->name("exchange.listVoucher")->whereNumber("page");
 
 });
 
@@ -144,10 +144,10 @@ Route::prefix('/admin')->middleware(['auth', 'status'])->group(function () {
         Route::post('/updateVoucher{id}', [VoucherController::class, "updateVoucher"])->name("voucher.updateVoucher");
         Route::post('/deleteVoucher{id}', [VoucherController::class, "deleteVoucher"])->name("voucher.deleteVoucher");
 
-        Route::get("/editBranch{id}", [BranchController::class, "editBranch"])->name("voucher.editBranch");
+        Route::get("/editBranch{id}", [BranchController::class, "editBranch"])->name("voucher.editBranch")->whereNumber("id");
         Route::post("/editBranch{id}", [BranchController::class, "updateBranch"])->name("voucher.updateBranch");
 
-        Route::get("/deleteBranch{id}", [BranchController::class, "deleteBranch"])->name("voucher.deleteBranch");
+        Route::get("/deleteBranch{id}", [BranchController::class, "deleteBranch"])->name("voucher.deleteBranch")->whereNumber("id");
 
     });
 
@@ -161,7 +161,7 @@ Route::prefix('/admin')->middleware(['auth', 'status'])->group(function () {
 
     Route::prefix("history")->group(function () {
         Route::get("/", [HistoryController::class, "index"])->name("history.index");
-        Route::get("delete/{id}", [HistoryController::class, "deleteCart"])->name("history.deleteCart");
+        Route::get("delete/{id}", [HistoryController::class, "deleteCart"])->name("history.deleteCart")->whereNumber("id");
 
         Route::get("/selectCart/{id}-{imageCart}", [HistoryController::class, "selectCart"])->name("history.selectCart");
         Route::get("/confirm/{token}", [HistoryController::class, "confirm"])->name("history.confirm");

@@ -5,23 +5,25 @@
             $max = count($data) ;
         @endphp
         <div class="exchange__container-list-row row" >
-            @foreach ($data as $item)
+            @forelse ($data as $item)
+                <div class="exchange__container-item " id="voucher{{$item->id}}">
+                    <img src="{{asset("storage/image/Branch/$item->id_branch_voucher.jpg")}}" alt="" />
+                    <div class="exchange__container-body">
+                    <h2>{{$item->name_voucher}}</h2>
+                    <ul>
+                        <li><span>Point:</span> {{$item->point}}</li>
 
-                        <div class="exchange__container-item " id="voucher{{$item->id}}">
-                            <img src="{{asset("storage/image/Branch/$item->id_branch_voucher.jpg")}}" alt="" />
-                            <div class="exchange__container-body">
-                            <h2>{{$item->name_voucher}}</h2>
-                            <ul>
-                                <li><span>Point:</span> {{$item->point}}</li>
-
-                            </ul>
-                                <div class="exchange__container-btn">
-                                    <button name="savevoucher" onclick="exchange({{$item->id}})" value="" >Lưu</button>
-                                </div>
-                            </div>
+                    </ul>
+                        <div class="exchange__container-btn">
+                            <button name="savevoucher" onclick="exchange({{$item->id}})" value="" >Lưu</button>
                         </div>
-
-            @endforeach
+                    </div>
+                </div>
+            @empty
+                <div class="result">
+                    <b>Hiện tại không bạn chưa có voucher</b>
+                </div>
+            @endforelse
         </div>
     </div>
 </div>
