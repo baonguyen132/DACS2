@@ -69,7 +69,7 @@ class VoucherController extends Controller
 
         Storage::put("public/image/QRCode/" . $namefile . ".txt", $qr);
 
-        return redirect(route("voucher.index.battery", ["id" => $request->chooseBV]));
+        return redirect(route("voucher.index.battery", ["id" => $request->chooseBV , "page" => 1]));
 
 
         // $qr = Storage::get("public/image/QRCode//a.txt");

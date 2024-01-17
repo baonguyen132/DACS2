@@ -22,7 +22,7 @@
                             <div class="content-introduce">
                                 <h3>
                                    @php $a = explode( " " , $item->name_voucher )  @endphp
-                                    Sale {{$a[1]}}
+                                    Sale {{$a[0]}}
 
                                 </h3>
                                 <ul>
