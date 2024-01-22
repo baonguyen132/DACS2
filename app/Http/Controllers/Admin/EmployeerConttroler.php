@@ -71,13 +71,12 @@ class EmployeerConttroler extends Controller
                 'dob' => $request->dateofbirth,
                 'token' => $request->_token
             ]);
-
+            
             Mail::send('admin.main.layout.register.mail', ["token" => $request->_token, 'fullname' => $request->fullname, 'username' => $request->gmail, 'password' => $password, 'cccd' => $request->CCCD, 'dob' => $request->dateofbirth], function ($email) use ($request) {
                 $email->subject("Xác nhận tài khoản");
                 $email->to($request->gmail);
             });
-
-            return redirect(route("register.index"));
+            return redirect(route("register.index" , ["detail"=>"employee"]));
 
         } catch (\Throwable $th) {
 

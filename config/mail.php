@@ -40,7 +40,7 @@ return [
             'port' => 465,
             'encryption' => 'tls',
             'username' => 'hbnguyen132@gmail.com',
-            'password' => 'optj vyzr bint hqru',
+            'password' => 'pglj kmjz dgdx ebkf',
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN'),
         ],
