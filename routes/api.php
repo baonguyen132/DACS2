@@ -4,6 +4,9 @@ use App\Http\Controllers\API\ApiBatteryController;
 use App\Http\Controllers\API\ApiBlogController;
 use App\Http\Controllers\API\ApiCartController;
 use App\Http\Controllers\API\ApiHomeController;
+
+use App\Http\Controllers\APIDACS3\APIBattery;
+use App\Http\Controllers\APIDACS3\APICart;
 use App\Http\Controllers\APIDACS3\APIUser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -32,3 +35,10 @@ Route::prefix("auth")->group(function () {
     Route::post("/signup" , [APIUser::class,"signup"]);
     Route::post("/sendOtp" , [APIUser::class,"sendOtp"]);
 } );
+Route::prefix('batteryapi')->group(function () {
+    Route::get("/" , [APIBattery::class , "getData"]) ;
+});
+
+Route::prefix("cartapi")->group(function () {
+    Route::post("/confirm" , [APICart::class , "getData"]) ;
+});

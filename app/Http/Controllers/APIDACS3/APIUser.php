@@ -58,10 +58,15 @@ class APIUser extends Controller
 
     }
     public function sendOtp(Request $request){
-        Mail::send("APIDACS3/sendOTP" ,["codeOTP"=>$request->codeOtp] , function($email) use ($request) {
-            $email->to($request->email) ;
-            $email->subject("Your code Otp");
-        });
-        echo "Kiểm tra mail của bạn" ;
+        try {
+            Mail::send("APIDACS3.sendOTP" ,["codeOTP"=>$request->codeOtp] , function($email) use ($request) {
+                $email->to($request->email) ;
+                $email->subject("Your code Otp");
+            });
+            echo "Kiểm tra mail của bạn" ;
+        } catch (Exception $e) {
+            echo $e ;
+        }
+       
     }
 }
