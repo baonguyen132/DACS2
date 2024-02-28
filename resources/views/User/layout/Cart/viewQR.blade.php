@@ -10,9 +10,9 @@
 
 </style>
 @php
-    if(file_exists(public_path("storage/image/User/QRCode/$id.txt")))
+    if(file_exists(public_path("storage/image/User/QRCode/$id.xml")))
     {
-        $fp = fopen(public_path("storage/image/User/QRCode/$id.txt"), "r");//mở file ở chế độ đọc
+        $fp = fopen(public_path("storage/image/User/QRCode/$id.xml"), "r");//mở file ở chế độ đọc
 
         while(! feof($fp)) {
             echo fgets($fp);
