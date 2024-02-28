@@ -145,7 +145,7 @@ class CartServices
 
             //tạo mã qr
             $qr = QrCode::size(400)->generate($token);
-            Storage::put("public/image/User/QRCode/" . $namefile . ".txt", $qr);
+            Storage::put("public/image/User/QRCode/" . $namefile . ".xml", $qr);
 
 
             $file = ($request->file("fileimage")->storeAs("public/image/User/Confrim/", $namefile . ".jpg"));
