@@ -62,7 +62,7 @@ class HistoryController extends Controller
             $iduser = $cart[0]["iduser"];
             $total = $cart[0]["total"];
 
-
+            
 
             if ($image == "NULL" || $image == NULL) {
                 echo "not successful";
@@ -70,7 +70,7 @@ class HistoryController extends Controller
                 DB::update("UPDATE `users` SET `point`=`point` + $total  WHERE id =  $iduser");
                 Cart::where("token", "=", "$token")->update(["token" => "NULL", "image" => "NULL"]);
                 Storage::delete("public/image/User/Confrim/" . $image . ".jpg");
-                Storage::delete("public/image/User/QRCode/" . $image . ".txt");
+                Storage::delete("public/image/User/QRCode/" . $image . ".xml");
                 echo "successful";
             }
         } catch (\Throwable $th) {
