@@ -46,7 +46,7 @@ class HistoryController extends Controller
         Cart::where("id", "=", $id)->delete();
 
         Storage::delete("public/image/User/Confrim/" . $image . ".jpg");
-        Storage::delete("public/image/User/QRCode/" . $image . ".txt");
+        Storage::delete("public/image/User/QRCode/" . $image . ".xml");
 
         return redirect()->back();
     }
