@@ -40,5 +40,8 @@ Route::prefix('batteryapi')->group(function () {
 });
 
 Route::prefix("cartapi")->group(function () {
-    Route::post("/confirm" , [APICart::class , "getData"]) ;
+    Route::post("/confirm" , [APICart::class , "storeCart"]) ;
+    Route::post("/emailConfirm" , [APICart::class , "sendEmailConfirm"]) ;
+    Route::get("/iduser={id}" , [APICart::class , "get"]);
+    
 });
