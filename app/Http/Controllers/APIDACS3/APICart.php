@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Storage;
 class APICart extends Controller
 {
     function get($id){
-        $data = Cart::where("iduser", "=" , $id)->orderByDesc("id")->get(["id" , "created_at" , "total" , "token"]) ;
+        $data = Cart::where("iduser", "=" , $id)->orderByDesc("id")->get() ;
         return response([
             "data" => $data 
         ]);
@@ -80,4 +80,9 @@ class APICart extends Controller
             });
     } 
     
+    function detail($id){
+        $detail = DB::table("detail")->join("batterys", "idbatterys", "=", "batterys.id")->where("detail.idcart", "=", $id)->get();
+        return ["data" => $detail] ;
+    }
+
 }

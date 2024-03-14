@@ -8,6 +8,8 @@ use App\Http\Controllers\API\ApiHomeController;
 use App\Http\Controllers\APIDACS3\APIBattery;
 use App\Http\Controllers\APIDACS3\APICart;
 use App\Http\Controllers\APIDACS3\APIUser;
+use App\Http\Controllers\APIDACS3\APIVoucher;
+use App\Http\Controllers\APIDACS3\APIVoucher_Branch;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -43,5 +45,13 @@ Route::prefix("cartapi")->group(function () {
     Route::post("/confirm" , [APICart::class , "storeCart"]) ;
     Route::post("/emailConfirm" , [APICart::class , "sendEmailConfirm"]) ;
     Route::get("/iduser={id}" , [APICart::class , "get"]);
-    
+    Route::get("/detail/idcart={id}" , [APICart::class , "detail"]) ;    
+});
+
+Route::prefix("branchapi")->group(function (){
+    Route::get("/" , [APIVoucher_Branch::class , "get"]);
+});
+
+Route::prefix("voucherapi")->group(function (){
+    Route::get("/{id_branch}/{id_client}" , [APIVoucher::class , "get"]);
 });
