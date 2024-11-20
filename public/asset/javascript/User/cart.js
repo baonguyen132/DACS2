@@ -8,6 +8,9 @@ function randomId() {
 const xhttp = new XMLHttpRequest();
 
 function load() {
+
+    document.getElementById("fileimage").value = localStorage.getItem("namefile")
+
     xhttp.onload = function () {
         const result = JSON.parse(this.responseText).records;
 

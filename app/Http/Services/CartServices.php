@@ -105,9 +105,7 @@ class CartServices
         if ($cart != null) {
             // lấy thông tin người dùng
             $user = Auth::user();
-            // tạo tên file
-            $date = explode("/", date("Y/m/d"));
-            $namefile = time() . $date[0] . $date[1] . $date[2];
+            $namefile = $request->fileimage ;
             //set thông số
             $total = 0;
             $sql = array();
@@ -146,11 +144,6 @@ class CartServices
             //tạo mã qr
             $qr = QrCode::size(400)->generate($token);
             Storage::put("public/image/User/QRCode/" . $namefile . ".xml", $qr);
-
-
-            $file = ($request->file("fileimage")->storeAs("public/image/User/Confrim/", $namefile . ".jpg"));
-
-
 
             Mail::send('User.layout.Cart.mail', ["cart" => $cart, "battery" => $battery, "fullname" => $user->name, "file" => $namefile], function ($email) use ($user) {
                 $email->subject("Thông tin thu gom pin");

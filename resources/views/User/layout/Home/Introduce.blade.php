@@ -1,4 +1,4 @@
-<div id="protect" style=" background-image: url('{{asset("asset/image/User/background.jpg")}}'); background-repeat: no-repeat; background-size: cover;background-attachment: fixed;">
+<div id="protect" style=" background-image: url('{{asset("asset/image/User/background.png")}}'); background-repeat: no-repeat; background-size: cover;background-attachment: fixed;">
     <div class="grid wide">
         <div class="protect__container">
             <div class="protect__head">

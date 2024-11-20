@@ -15,7 +15,7 @@
         <div class="form-floating">
             <p>Ảnh minh chứng</p>
 
-            <input type="file" name="fileimage"  class="form-control" style="padding: 18px 20px;" required>
+            <input type="text" name="fileimage" id="fileimage" class="form-control" style="padding: 18px 20px;" required>
         </div>
         <div class="infor">
             <section class="test">

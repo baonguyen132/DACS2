@@ -69,4 +69,33 @@ class APIUser extends Controller
         }
        
     }
+
+    public function replaceAddress(Request $request){
+        try {
+            User::where("id" , "=" , $request->id)->update(["address" => $request->address]);
+            echo "sucessful" ;
+        } catch (Exception $e) {
+            echo "notSucessful" ;
+        }
+    }
+    public function replacePassword(Request $request){
+        try {
+            $user = User::where("id" , "=" , $request->id)->selectRaw("password")->get();
+            json_decode($user) ;
+            $password = $user[0]["password"] ;
+
+            if (Hash::check($request->oldpassword, $password)) {
+
+                User::where("id" , "=" , $request->id)->update(["password" => Hash::make($request->newpassword)]);
+                echo "sucessful" ;
+    
+            } else {
+                echo "failPassword" ;
+            }
+
+            
+        } catch (Exception $e) {
+            echo "notSucessful" ;
+        }
+    }
 }

@@ -22,4 +22,26 @@ class APIVoucher_Branch extends Controller
             ->get();
         return response(["data" => $data]);
     }
+
+    public function number_detail(){
+        $totalBranch = DB::table("voucher_branchs")
+                        ->selectRaw("count(id) as totalBranch")
+                        ->get();
+        $totalVoucher = DB::table("voucher")
+                        ->selectRaw("count(id) as totalVoucher")
+                        ->get() ;
+        
+        $remaining = DB::table("voucher")
+                        ->selectRaw("count(id) as remaining")
+                        ->where("IDClient" , "=" , 0)
+                        ->get() ;
+
+        return response([
+            "totalBranch" => $totalBranch[0]->totalBranch,
+            "totalVoucher" => $totalVoucher[0]->totalVoucher ,
+            "remaining" => $remaining[0]->remaining ,
+            
+
+        ]);
+    }
 }

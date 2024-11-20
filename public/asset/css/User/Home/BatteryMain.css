@@ -54,7 +54,7 @@ h2 strong {
     /* margin: 0 auto; */
     flex-direction: column;
     padding: 35px;
-    padding-bottom: 0px;
+    /* padding-bottom: 0px; */
 }
 
 /*-----------------CSS battery------------------*/
@@ -149,6 +149,44 @@ h2 strong {
     font-style: italic;
     color: #1b4d3e;
 }
+.center-battery {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 0px 35px;
+    position: relative;
+    gap: 35px;
+}
+
+button.open_mode_load_image {
+    width: 190px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgb(58 96 90) 0%, rgb(114 176 170) 100%);
+    font-size: 18px;
+    color: white;
+    font-weight: bolder;
+    transition: all .5s;
+    transform: translateZ(0px);
+}
+
+button.open_mode_load_image:hover {transform: translateY(-5px);}
+
+button.add_battery {
+    width: 190px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(270deg, rgb(58 96 90) 0%, rgb(114 176 170) 100%);
+    font-size: 18px;
+    color: white;
+    font-weight: bolder;
+    transition: all .5s;
+    transform: translateZ(0px);
+}
+
+button.add_battery:hover {transform: translateY(-5px);}
 
 /* -------------------------CSS - btn ----------------------- */
 
@@ -330,4 +368,8 @@ input[type="submit"][name="submitBattery"] {
 
 form#battery .form-floating {
     width: 90%;
+}
+button.btn.send_image {
+    background: linear-gradient(90deg, rgb(58 96 90) 0%, rgb(114 176 170) 100%);
+    color: white;
 }
