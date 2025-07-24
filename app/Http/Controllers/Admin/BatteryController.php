@@ -81,8 +81,6 @@ class BatteryController extends Controller
 
         $array = explode("-", $request->deleteBattery);
 
-
-
         Battery::where("id", "=", $array[0])->delete();
         Storage::delete("public/image/Battery/" . $array[1] . ".jpg");
 
