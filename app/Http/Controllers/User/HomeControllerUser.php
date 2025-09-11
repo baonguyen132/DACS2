@@ -21,7 +21,7 @@ class HomeControllerUser extends Controller
         $user = (Auth::user());
         $title = "Trang chủ";
 
-        return view("User.layout.Home", compact("user", "title"));
+        return redirect()->route("login.get");
 
     }
 

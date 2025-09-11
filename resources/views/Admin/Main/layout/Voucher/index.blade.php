@@ -8,7 +8,7 @@
                     <div class="code-voucher">
                         <div class="contentV">
                             <div class="content-image">
-                                <img src="{{asset("storage/image/Branch/$item->id.jpg")}}"  width ="80%" height = "80%">
+                                <img src="{{$item->logo}}"  width ="80%" height = "80%">
                             </div>
                             <div class="content-introduce">
                                 <h3>

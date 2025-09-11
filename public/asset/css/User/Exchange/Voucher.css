@@ -124,6 +124,10 @@
     margin-top: 10px;
 }
 
+.exchange__container-body ul li span {
+    font-size: 18px;
+    font-weight: 700;
+}
 .exchange__container-body ul li {
 }
 .exchange__container-btn {
@@ -132,10 +136,6 @@
     justify-content: center;
 }
 
-.exchange__container-body ul li span {
-    font-size: 18px;
-    font-weight: 700;
-}
 
 .exchange__container-btn button {
     border: none;

@@ -42,11 +42,11 @@ Route::prefix("cart")->middleware(["auth", "checkInformation"])->group(function 
 
 
 });
-Route::prefix("history")->middleware(["auth", "checkInformation"])->group(function () {
-    Route::get("page={page}", [HistoryUserController::class, "index"])->name("historyuser.index")->whereNumber("page");
-    Route::get("history={id}", [HistoryUserController::class, "detail"])->name("historyuser.detail")->whereNumber("id");
+// Route::prefix("history")->middleware(["auth", "checkInformation"])->group(function () {
+//     Route::get("page={page}", [HistoryUserController::class, "index"])->name("historyuser.index")->whereNumber("page");
+//     Route::get("history={id}", [HistoryUserController::class, "detail"])->name("historyuser.detail")->whereNumber("id");
 
-});
+// });
 
 Route::prefix("blog")->group(function () {
     Route::get("", [BlogController::class, "index"])->name("blog.index");

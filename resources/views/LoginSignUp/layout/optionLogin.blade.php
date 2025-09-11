@@ -13,7 +13,7 @@
 
         <div class="view1">
 
-            <a href="{{route("home")}}"><i class='bx bx-home'></i>Home</a>
+            <a href="http://localhost:5173/"><i class='bx bx-home'></i>Home</a>
         </div>
 
         <div class="view2">

@@ -1,6 +1,5 @@
 <?php
-
-namespace App\Http\Controllers\APIDACS3;
+namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Models\VoucherBranch;
@@ -15,9 +14,9 @@ class APIVoucher_Branch extends Controller
         $data = DB::table("voucher_branchs")->leftjoin("voucher", function (JoinClause $join) {
             $join->on("voucher_branchs.id", "=", "voucher.id_branch_voucher")->where("IDClient", "=", 0);
         })
-            ->selectRaw("count(voucher.id) as count , name_branch_voucher , voucher_branchs.id")
+            ->selectRaw("count(voucher.id) as count , name_branch_voucher , voucher_branchs.id , voucher_branchs.logo , voucher_branchs.color , voucher_branchs.desc")
 
-            ->groupBy('name_branch_voucher', 'voucher_branchs.id')
+            ->groupBy('name_branch_voucher', 'voucher_branchs.id' , 'voucher_branchs.logo', 'voucher_branchs.color', 'voucher_branchs.desc')
 
             ->get();
         return response(["data" => $data]);

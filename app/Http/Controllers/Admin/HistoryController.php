@@ -77,10 +77,5 @@ class HistoryController extends Controller
             echo "not successful";
         }
 
-
-
-
-
-
     }
 }

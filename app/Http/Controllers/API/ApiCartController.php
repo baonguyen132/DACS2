@@ -38,20 +38,9 @@ class ApiCartController extends Controller
         } else {
             echo "fail";
         }
-
-
     }
 
+    public function editCart($id, $count){$this->cart->editCart($id, $count);}
 
-    public function editCart($id, $count)
-    {
-        $this->cart->editCart($id, $count);
-
-    }
-
-    public function deleteCart($id)
-    {
-        $this->cart->deleteCart($id);
-
-    }
+    public function deleteCart($id){$this->cart->deleteCart($id);}
 }

@@ -9,13 +9,13 @@ const scanner = new Html5QrcodeScanner("reader", {
 
 scanner.render(success, error);
 function success(result) {
-    gethttp = "http://127.0.0.1:8000/admin/history/confirm/" + result;
+    gethttp = "http://localhost:8000/admin/history/confirm/" + result;
 
     $.get(gethttp, function (data, status) {
         console.log(data);
         if (data == "successful") {
             alert("successful");
-            window.location = "http://127.0.0.1:8000/admin/history";
+            window.location = "http://localhost:8000/admin/history";
         } else {
             alert(data);
             location.reload();

@@ -27,14 +27,14 @@
                 @foreach ($cart as $row)
                     <tr style="height: 55px; ">
                         <td style=" border: 1px solid; font-size: 15px; padding: 0px; ">{{$stt}}</td>
-                        <td style=" border: 1px solid; font-size: 15px; padding: 0px; ">{{$row->batteryData->name_battery}}</td>
-                        <td style=" border: 1px solid; font-size: 15px; padding: 0px; ">{{$row->batteryData->point}}</td>
-                        <td style=" border: 1px solid; font-size: 15px; padding: 0px; ">{{$row->quantity}}</td>
-                        <td style=" border: 1px solid; font-size: 15px; padding: 0px; ">{{$row->quantity * $row->batteryData->point }}</td>
+                        <td style=" border: 1px solid; font-size: 15px; padding: 0px; ">{{$row->battery->name_battery}}</td>
+                        <td style=" border: 1px solid; font-size: 15px; padding: 0px; ">{{$row->battery->point}}</td>
+                        <td style=" border: 1px solid; font-size: 15px; padding: 0px; ">{{$row->count}}</td>
+                        <td style=" border: 1px solid; font-size: 15px; padding: 0px; ">{{$row->count * $row->battery->point }}</td>
                     </tr>
                     @php
                         $stt++ ;
-                        $tong += $row->quantity * $row->batteryData->point ;
+                        $tong += $row->count * $row->battery->point ;
                     @endphp
                 @endforeach
                 <tr>

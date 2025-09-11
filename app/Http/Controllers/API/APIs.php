@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\APIDACS3;
+namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 
-class APIUser extends Controller
+class APIs extends Controller
 {
     //
     function getUser($id)  {
