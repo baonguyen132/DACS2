@@ -70,7 +70,6 @@
                                 </button>
                                 @csrf
                             </form>
-                            <button style="background: red; width: max-content ; color: white" type="submit">Delete</button>
                         @else
                             <a href="{{route('register.show' , ['id' => $item->id , "detail" => $detail])}}" class="modern-action-btn view-btn">
                                 <i class='bx bx-show'></i>

@@ -690,10 +690,11 @@ input#newpassword {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin: 0 auto;
     box-shadow: 0 8px 25px rgba(16, 169, 90, 0.4);
     text-transform: uppercase;
     letter-spacing: 1px;
+    width: 100%;
+    justify-content: center;
 }
 
 .submit-btn:hover {

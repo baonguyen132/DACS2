@@ -868,8 +868,6 @@ body.dark .detail-item {
     background: linear-gradient(135deg, #0d8b4a 0%, #10a95a 100%);
     transform: translateY(-3px);
     box-shadow: 0 15px 40px rgba(16, 169, 90, 0.4);
-    color: white;
-    text-decoration: none;
 }
 
 .main-create-btn i {
@@ -894,6 +892,7 @@ body.dark .detail-item {
     flex-direction: column;
     align-items: flex-end;
     gap: 15px;
+    width: max-content;
 }
 
 .floating-create-main {
@@ -1060,94 +1059,447 @@ body.dark .detail-item {
     animation: pulse-create 2s infinite;
 }
 
-/* Responsive Design for Create Buttons */
+/* Modern Create Form Styling */
+.modern-create-container {
+    /* max-width: 600px; */
+    /* padding: 20px; */
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Form Header */
+.create-form-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.header-gradient {
+    background: linear-gradient(135deg, #10a95a 0%, #0d8b4a 100%);
+    color: white;
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(16, 169, 90, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.header-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    opacity: 0.1;
+}
+
+.create-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.header-gradient h2 {
+    margin: 15px 0 10px 0;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 1;
+}
+
+.header-gradient p {
+    margin: 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+}
+
+/* Form Wrapper */
+.create-form-wrapper {
+    /* background: var(--slidebar-color); */
+    /* border-radius: 20px; */
+    /* padding: 40px; */
+    /* box-shadow: 0 15px 35px rgba(16, 169, 90, 0.1); */
+    /* border: 1px solid rgba(16, 169, 90, 0.1); */
+    /* position: relative; */
+}
+
+.create-form-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #10a95a, #0d8b4a);
+    border-radius: 20px 20px 0 0;
+}
+
+/* Form Groups */
+.form-group-modern {
+    margin-bottom: 30px;
+}
+
+/* Modern Labels */
+.modern-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #10a95a;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+}
+
+.modern-label i {
+    font-size: 1.2rem;
+    background: rgba(16, 169, 90, 0.1);
+    padding: 6px;
+    border-radius: 6px;
+}
+
+/* Input Wrapper */
+.input-wrapper {
+    position: relative;
+}
+
+/* Modern Inputs */
+.modern-input {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid rgba(16, 169, 90, 0.2);
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--slidebar-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    outline: none;
+    position: relative;
+    z-index: 1;
+}
+
+.modern-input:focus {
+    border-color: #10a95a;
+    box-shadow: 0 0 0 4px rgba(16, 169, 90, 0.1);
+    transform: translateY(-2px);
+}
+
+.modern-input::placeholder {
+    color: var(--text-color);
+    opacity: 0.6;
+}
+
+/* Input Border Animation */
+.input-border {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #10a95a, #0d8b4a);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.modern-input:focus + .input-border {
+    width: 100%;
+}
+
+/* Date Input Specific */
+.date-input {
+    color-scheme: light;
+}
+
+body.dark .date-input {
+    color-scheme: dark;
+}
+
+/* Error Messages */
+.error-message {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: rgba(220, 53, 69, 0.1);
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    border-radius: 8px;
+    color: #dc3545;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.error-message i {
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+/* Submit Section */
+.submit-section {
+    margin-top: 40px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Modern Submit Button */
+.modern-submit-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #10a95a 0%, #0d8b4a 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Segoe UI', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    min-width: 180px;
+    justify-content: center;
+    letter-spacing: 0.3px;
+    box-shadow: 0 8px 25px rgba(16, 169, 90, 0.3);
+}
+
+.modern-submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.modern-submit-btn:hover::before {
+    left: 100%;
+}
+
+.modern-submit-btn:hover {
+    background: linear-gradient(135deg, #0d8b4a 0%, #10a95a 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(16, 169, 90, 0.4);
+}
+
+.modern-submit-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(16, 169, 90, 0.3);
+}
+
+.modern-submit-btn i {
+    font-size: 1.2rem;
+}
+
+/* Cancel Button */
+.modern-cancel-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    background: transparent;
+    color: #6c757d;
+    border: 2px solid #6c757d;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Segoe UI', sans-serif;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-width: 140px;
+    justify-content: center;
+    letter-spacing: 0.3px;
+}
+
+.modern-cancel-btn:hover {
+    background: #6c757d;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(108, 117, 125, 0.3);
+    text-decoration: none;
+}
+
+.modern-cancel-btn i {
+    font-size: 1.2rem;
+}
+
+/* Result Messages */
+.result-message {
+    margin-top: 25px;
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.result-message.success {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: #22c55e;
+}
+
+.result-message.error {
+    background: rgba(220, 53, 69, 0.1);
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    color: #dc3545;
+}
+
+.result-message i {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* Ripple Effect for Submit Button */
+.btn-ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Dark Mode Support */
+body.dark .create-form-wrapper {
+    background: var(--sidebar-color);
+    border-color: rgba(16, 169, 90, 0.2);
+}
+
+body.dark .modern-input {
+    background: var(--sidebar-color);
+    border-color: rgba(16, 169, 90, 0.3);
+}
+
+body.dark .modern-input:focus {
+    background: var(--sidebar-color);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .main-create-btn {
-        padding: 14px 24px;
-        font-size: 1rem;
+    .modern-create-container {
+        padding: 15px;
+    }
+    
+    .create-form-wrapper {
+        padding: 25px 20px;
+        margin: 0 10px;
+    }
+    
+    .header-gradient {
+        padding: 25px 20px;
+        margin: 0 10px;
+    }
+    
+    .header-gradient h2 {
+        font-size: 1.6rem;
+    }
+    
+    .submit-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .modern-submit-btn,
+    .modern-cancel-btn {
         width: 100%;
-        justify-content: center;
-    }
-    
-    .enhanced-floating-create {
-        bottom: 20px;
-        right: 20px;
-    }
-    
-    .floating-create-main {
-        width: 55px;
-        height: 55px;
-    }
-    
-    .floating-create-main a {
-        font-size: 1.5rem;
-    }
-    
-    .quick-actions {
-        right: 20px;
-        gap: 10px;
-    }
-    
-    .quick-action-btn {
-        width: 45px;
-        height: 45px;
-        font-size: 1.1rem;
+        min-width: auto;
     }
 }
 
 @media (max-width: 480px) {
-    .create-button-section {
-        margin-top: 15px;
-        padding-top: 15px;
+    .create-form-wrapper {
+        padding: 20px 15px;
     }
     
-    .main-create-btn {
-        padding: 12px 20px;
-        font-size: 0.95rem;
-        gap: 8px;
+    .header-gradient {
+        padding: 20px 15px;
     }
     
-    .main-create-btn i {
-        font-size: 1.1rem;
-        padding: 4px;
+    .create-icon {
+        font-size: 2.5rem;
+        padding: 12px;
     }
     
-    .floating-tooltip {
-        font-size: 0.8rem;
-        padding: 8px 12px;
-    }
-}
-
-/* Desktop Only Elements */
-.desktop-only {
-    display: block;
-}
-
-@media (max-width: 768px) {
-    .desktop-only {
-        display: none;
-    }
-}
-
-/* Enhanced Responsiveness */
-@media (max-width: 992px) {
-    .quick-actions {
-        display: none;
-    }
-}
-
-@media (max-width: 576px) {
-    .enhanced-floating-create {
-        bottom: 15px;
-        right: 15px;
-    }
-    
-    .floating-create-main {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .floating-create-main a {
+    .header-gradient h2 {
         font-size: 1.4rem;
     }
+    
+    .header-gradient p {
+        font-size: 1rem;
+    }
+    
+    .modern-input {
+        padding: 14px 16px;
+        font-size: 0.95rem;
+    }
+    
+    .modern-submit-btn,
+    .modern-cancel-btn {
+        padding: 14px 24px;
+        font-size: 1rem;
+    }
+}
+
+/* Input Focus Animation Enhancement */
+@keyframes input-focus {
+    0% {
+        box-shadow: 0 0 0 0 rgba(16, 169, 90, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 8px rgba(16, 169, 90, 0.1);
+    }
+    100% {
+        box-shadow: 0 0 0 4px rgba(16, 169, 90, 0.1);
+    }
+}
+
+.modern-input:focus {
+    animation: input-focus 0.3s ease;
+}
+
+/* Loading State for Submit Button */
+.modern-submit-btn.loading {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.modern-submit-btn.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

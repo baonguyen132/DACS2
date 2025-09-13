@@ -43,7 +43,6 @@ Route::prefix("cartapi")->group(function () {
     Route::get("/getAll" , [APICart::class , "getall"]);
     Route::get("/confirmed/iduser={id}" , [APICart::class , "getconfirmed"]);
     Route::get("/notconfirm/iduser={id}" , [APICart::class , "getnotconfirm"]);
-
 });
 
 

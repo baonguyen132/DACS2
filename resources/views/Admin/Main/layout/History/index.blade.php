@@ -70,10 +70,12 @@ function openMapLocation(address) {
     }
     
     const encodedAddress = encodeURIComponent(address);
-    const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`;
+    // Sử dụng chế độ chỉ đường (directions) của Google Maps
+    const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`;
     
     window.open(googleMapsUrl, '_blank');
 }
+</script>
 </script>
 
 <link rel="stylesheet" href="{{ asset('asset/css/Admin/History_clean.css') }}">
